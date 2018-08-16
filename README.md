@@ -1,24 +1,22 @@
 ![ARK Core](https://i.imgur.com/1aP6F2o.png)
 
-# ARK Core
+# PHANTOM Core
 
 ## Introduction
 
-This repository contains all plugins that make up the ARK Core.
+This repository contains all plugins that make up the PHANTOM Core.
 
 ## Documentation
 
-- Development : https://docs.ark.io/core/development.html
-- Docker : https://docs.ark.io/core/docker.html
+- Development : Coming Soon
+- Docker : Coming Soon
 
 ## API Documentation
 
-- API v1 : https://docs.ark.io/developers/api/public/v1/
-- API v2 : https://docs.ark.io/developers/api/public/v2/
+- API v1 : Coming Soon
+- API v2 : Coming Soon
 
-## GitHub Development Bounty
 
-- Get involved with ARK development and earn ARK coins : https://bounty.ark.io
 
 ## Core Packages
 
@@ -63,5 +61,5 @@ If you discover a security vulnerability within this package, please send an e-m
 - [All Contributors](../../contributors)
 
 ## License
-
+[MIT](LICENSE) © [PHANTOM](https://phantom.org)
 [MIT](LICENSE) © [ArkEcosystem](https://ark.io)
