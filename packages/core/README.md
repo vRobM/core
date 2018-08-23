@@ -1,16 +1,16 @@
-![ARK Core](https://i.imgur.com/1aP6F2o.png)
+![PHANTOM Core](https://i.imgur.com/dPHOKrL.jpg)
 
-# ARK Core
+# PHANTOM Core
 
 ## Installation
 
 ```bash
-yarn add @arkecosystem/core
+yarn add @phantomcore/core
 ```
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phantom.org. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -22,4 +22,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) ©
