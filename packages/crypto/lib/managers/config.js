@@ -1,11 +1,11 @@
-const arkjsv1 = require('arkjsv1')
+const phantomjsv1 = require('phantomjsv1')
 const _ = require('lodash')
 const deepmerge = require('deepmerge')
 const feeManager = require('./fee')
 const dynamicFeeManager = require('./dynamic-fee')
 
 const { TRANSACTION_TYPES, CONFIGURATIONS } = require('../constants')
-const defaultConfig = require('../networks/ark/devnet.json')
+const defaultConfig = require('../networks/phantom/devnet.json')
 
 class ConfigManager {
   /**
@@ -26,7 +26,7 @@ class ConfigManager {
       this.config[key] = value
      }
 
-    arkjsv1.crypto.setNetworkVersion(this.config.pubKeyHash) // make sure ark.js v1 uses our config
+    phantomjsv1.crypto.setNetworkVersion(this.config.pubKeyHash) // make sure phantom.js v1 uses our config
 
     this.buildConstants()
     this.buildFees()

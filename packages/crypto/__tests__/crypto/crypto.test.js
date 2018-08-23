@@ -7,7 +7,7 @@ const crypto = require('../../lib/crypto/crypto')
 const configManager = require('../../lib/managers/config')
 const { TRANSACTION_TYPES, CONFIGURATIONS } = require('../../lib/constants')
 
-beforeEach(() => configManager.setConfig(CONFIGURATIONS.ARK.DEVNET))
+beforeEach(() => configManager.setConfig(CONFIGURATIONS.PHANTOM.DEVNET))
 
 describe('crypto.js', () => {
   describe('getBytes', () => {
@@ -246,13 +246,13 @@ describe('crypto.js', () => {
 
   describe('validate address on different networks', () => {
     it('should validate MAINNET addresses', () => {
-      configManager.setConfig(CONFIGURATIONS.ARK.MAINNET)
+      configManager.setConfig(CONFIGURATIONS.PHANTOM.MAINNET)
 
       expect(crypto.validateAddress('AdVSe37niA3uFUPgCgMUH2tMsHF4LpLoiX')).toBeTruthy()
     })
 
     it('should validate DEVNET addresses', () => {
-      configManager.setConfig(CONFIGURATIONS.ARK.DEVNET)
+      configManager.setConfig(CONFIGURATIONS.PHANTOM.DEVNET)
 
       expect(crypto.validateAddress('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN')).toBeTruthy()
     })

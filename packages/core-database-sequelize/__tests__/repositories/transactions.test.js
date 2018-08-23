@@ -3,7 +3,7 @@
 const toBeMinimalTransactionFields = require('../__support__/matchers/minimal-transaction-fields')
 expect.extend({ toBeMinimalTransactionFields })
 
-const { crypto, models } = require('@arkecosystem/crypto')
+const { crypto, models } = require('@phantomcore/crypto')
 const { Transaction } = models
 const SPV = require('../../lib/spv')
 

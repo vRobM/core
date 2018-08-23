@@ -1,11 +1,11 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const logger = container.resolvePlugin('logger')
 
-const { slots } = require('@arkecosystem/crypto')
-const { Block } = require('@arkecosystem/crypto').models
+const { slots } = require('@phantomcore/crypto')
+const { Block } = require('@phantomcore/crypto').models
 
 const delay = require('delay')
 const tickSyncTracker = require('./utils/tick-sync-tracker')
@@ -80,7 +80,7 @@ blockchainMachine.actionMap = blockchain => {
         event = 'SYNCED'
       }
 
-      if (process.env.ARK_ENV === 'test') {
+      if (process.env.PHANTOM_ENV === 'test') {
         event = 'TEST'
       }
 
@@ -133,7 +133,7 @@ blockchainMachine.actionMap = blockchain => {
     },
 
     exitApp () {
-      logger.error('Failed to startup blockchain. Exiting ARK Core! :rotating_light:')
+      logger.error('Failed to startup blockchain. Exiting PHANTOM Core! :rotating_light:')
       process.exit(1)
     },
 

@@ -1,13 +1,13 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
-const { TransactionGuard } = require('@arkecosystem/core-transaction-pool')
-const { Block } = require('@arkecosystem/crypto').models
+const container = require('@phantomcore/core-container')
+const { TransactionGuard } = require('@phantomcore/core-transaction-pool')
+const { Block } = require('@phantomcore/crypto').models
 const logger = container.resolvePlugin('logger')
 const requestIp = require('request-ip')
 const transactionPool = container.resolvePlugin('transactionPool')
-const { slots, crypto } = require('@arkecosystem/crypto')
-const { Transaction } = require('@arkecosystem/crypto').models
+const { slots, crypto } = require('@phantomcore/crypto')
+const { Transaction } = require('@phantomcore/crypto').models
 
 const schema = require('./schema')
 

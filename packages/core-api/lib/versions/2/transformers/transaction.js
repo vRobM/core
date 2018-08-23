@@ -1,11 +1,11 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const blockchain = container.resolvePlugin('blockchain')
 
-const { crypto } = require('@arkecosystem/crypto')
-const { Transaction } = require('@arkecosystem/crypto').models
+const { crypto } = require('@phantomcore/crypto')
+const { Transaction } = require('@phantomcore/crypto').models
 
 const formatTimestamp = require('./utils/format-timestamp')
 

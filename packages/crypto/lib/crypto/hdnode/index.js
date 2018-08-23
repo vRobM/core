@@ -99,7 +99,7 @@ module.exports = class HDNode {
 
       if (!network) throw new Error('Unknown network version')
 
-      // otherwise, assume a network object (or default to ark)
+      // otherwise, assume a network object (or default to phantom)
     } else {
       network = networks || configManager.all()
     }

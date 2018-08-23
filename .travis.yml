@@ -13,7 +13,7 @@ services:
   - redis-server
 
 env:
-  ARK_CI_TEST: true
+  PHANTOM_CI_TEST: true
 
 before_install:
   # - npm install yarn

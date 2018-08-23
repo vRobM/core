@@ -6,7 +6,7 @@ const ECSignature = require('../../lib/crypto/ecsignature')
 const transactionData = require('./fixtures/transaction')
 
 const configManager = require('../../lib/managers/config')
-const network = require('../../lib/networks/ark/devnet.json')
+const network = require('../../lib/networks/phantom/devnet.json')
 
 const createRandomTx = type => {
   let transaction

@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const ark = require('@arkecosystem/crypto')
+const phantom = require('@phantomcore/crypto')
 const database = require('../../../services/database')
 const getBip38Keys = require('../../../utils/bip38-keys')
 
@@ -8,7 +8,7 @@ module.exports = {
   async method (params) {
     const account = await getBip38Keys(params.userId, params.bip38)
 
-    const transaction = ark
+    const transaction = phantom
       .transactionBuilder
       .transfer()
       .recipientId(params.recipientId)
@@ -19,8 +19,8 @@ module.exports = {
     transaction.senderPublicKey = account.keys.getPublicKeyBuffer().toString('hex')
 
     delete transaction.signature
-    ark.crypto.sign(transaction, account.keys)
-    transaction.id = ark.crypto.getId(transaction)
+    phantom.crypto.sign(transaction, account.keys)
+    transaction.id = phantom.crypto.getId(transaction)
 
     await database.setObject(transaction.id, transaction)
 

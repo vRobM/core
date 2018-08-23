@@ -1,6 +1,6 @@
 'use strict'
 
-const { MULTI_SIGNATURE } = require('@arkecosystem/crypto').constants
+const { MULTI_SIGNATURE } = require('@phantomcore/crypto').constants
 
 module.exports = (received) => {
   return {

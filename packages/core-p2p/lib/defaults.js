@@ -1,7 +1,7 @@
 'use strict'
 
 module.exports = {
-  port: process.env.ARK_P2P_PORT || 4002,
+  port: process.env.PHANTOM_P2P_PORT || 4002,
   remoteinterface: true,
   suspendMinutes: 60,
   dns: [

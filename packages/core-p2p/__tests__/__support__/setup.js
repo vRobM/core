@@ -1,16 +1,16 @@
 'use strict'
 
 const path = require('path')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 jest.setTimeout(60000)
 
 exports.setUp = async () => {
   await container.setUp({
-    data: '~/.ark',
+    data: '~/.phantom',
     config: path.resolve(__dirname, './config')
   }, {
-    exit: '@arkecosystem/core-blockchain'
+    exit: '@phantomcore/core-blockchain'
   })
 }
 

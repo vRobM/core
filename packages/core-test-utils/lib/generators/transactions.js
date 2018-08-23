@@ -1,7 +1,7 @@
-const ark = require('arkjs')
+const phantom = require('phantomjs')
 const assert = require('assert')
-const { client, crypto } = require('@arkecosystem/crypto')
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
+const { client, crypto } = require('@phantomcore/crypto')
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
 const config = require('../../config')
 const superheroes = require('superheroes')
 
@@ -18,8 +18,8 @@ module.exports = (network, type, testWallet, testAddress, amount = 2, quantity =
     TRANSACTION_TYPES.VOTE
   ].includes(type), 'Invalid transaction type')
 
-  client.getConfigManager().setFromPreset('ark', network)
-  ark.crypto.setNetworkVersion(client.getConfigManager().config.pubKeyHash)
+  client.getConfigManager().setFromPreset('phantom', network)
+  phantom.crypto.setNetworkVersion(client.getConfigManager().config.pubKeyHash)
 
   const transactions = []
   for (let i = 0; i < quantity; i++) {
@@ -28,20 +28,20 @@ module.exports = (network, type, testWallet, testAddress, amount = 2, quantity =
 
     let transaction
     if (type === TRANSACTION_TYPES.TRANSFER) {
-      transaction = ark.transaction.createTransaction(
+      transaction = phantom.transaction.createTransaction(
         address,
         amount,
         `Test Transaction ${i + 1}`,
         passphrase
       )
     } else if (type === TRANSACTION_TYPES.SECOND_SIGNATURE) {
-      transaction = ark.signature.createSignature(passphrase, passphrase)
+      transaction = phantom.signature.createSignature(passphrase, passphrase)
     } else if (type === TRANSACTION_TYPES.DELEGATE_REGISTRATION) {
       const username = superheroes.random().toLowerCase().replace(/[^a-z0-9]/g, '_')
-      transaction = ark.delegate.createDelegate(passphrase, username)
+      transaction = phantom.delegate.createDelegate(passphrase, username)
     } else if (type === TRANSACTION_TYPES.VOTE) {
       const publicKey = crypto.getKeys(config.passphrase).publicKey
-      transaction = ark.vote.createVote(passphrase, [publicKey])
+      transaction = phantom.vote.createVote(passphrase, [publicKey])
     } else {
       break
     }

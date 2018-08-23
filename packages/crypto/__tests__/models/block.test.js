@@ -292,7 +292,7 @@ describe('Models - Block', () => {
   })
 
   describe('v1 fix', () => {
-    const { outlookTable } = require('../../lib/constants').CONFIGURATIONS.ARK.MAINNET
+    const { outlookTable } = require('../../lib/constants').CONFIGURATIONS.PHANTOM.MAINNET
     const table = {
       '5139199631254983076': '1000099631254983076',
       '4683900276587456793': '1000000276587456793',

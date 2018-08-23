@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const ark = require('@arkecosystem/crypto')
+const phantom = require('@phantomcore/crypto')
 const network = require('../../services/network')
 const database = require('../../services/database')
 
@@ -17,7 +17,7 @@ module.exports = {
     let transaction = await database.getObject(params.id)
     transaction = transaction || params
 
-    if (!ark.crypto.verify(transaction)) {
+    if (!phantom.crypto.verify(transaction)) {
       return {
         success: false,
         error: 'transaction does not verify',

@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const { utils } = require('@arkecosystem/crypto')
+const { utils } = require('@phantomcore/crypto')
 const database = require('../../../services/database')
 
 module.exports = {

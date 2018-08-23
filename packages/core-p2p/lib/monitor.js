@@ -4,9 +4,9 @@ const prettyMs = require('pretty-ms')
 const moment = require('moment')
 const delay = require('delay')
 
-const { slots } = require('@arkecosystem/crypto')
+const { slots } = require('@phantomcore/crypto')
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const logger = container.resolvePlugin('logger')
 const emitter = container.resolvePlugin('event-emitter')
@@ -48,12 +48,12 @@ module.exports = class Monitor {
   async updateNetworkStatus (fast = false) {
     try {
       // TODO: for tests that involve peers we need to sync them
-      if (process.env.ARK_ENV !== 'test') {
+      if (process.env.PHANTOM_ENV !== 'test') {
         await this.discoverPeers()
         await this.cleanPeers()
       }
 
-      if (Object.keys(this.peers).length < this.config.peers.list.length - 1 && process.env.ARK_ENV !== 'test') {
+      if (Object.keys(this.peers).length < this.config.peers.list.length - 1 && process.env.PHANTOM_ENV !== 'test') {
         this.config.peers.list
           .forEach(peer => (this.peers[peer.ip] = new Peer(peer.ip, peer.port)), this)
 
@@ -74,7 +74,7 @@ module.exports = class Monitor {
    * @throws {Error} If invalid peer
    */
   async acceptNewPeer (peer) {
-    if (this.guard.isSuspended(peer) || this.guard.isMyself(peer) || process.env.ARK_ENV === 'test') {
+    if (this.guard.isSuspended(peer) || this.guard.isMyself(peer) || process.env.PHANTOM_ENV === 'test') {
       return
     }
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 const Hapi = require('hapi')
 
 /**

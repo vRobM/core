@@ -1,6 +1,6 @@
 'use strict'
 
-require('@arkecosystem/core-test-utils')
+require('@phantomcore/core-test-utils')
 
 const app = require('../../__support__/setup')
 const utils = require('../utils')

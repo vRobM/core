@@ -1,11 +1,11 @@
 const Joi = require('joi')
-const ark = require('@arkecosystem/crypto')
+const phantom = require('@phantomcore/crypto')
 const database = require('../../services/database')
 
 module.exports = {
   name: 'transactions.create',
   async method (params) {
-    const transaction = ark
+    const transaction = phantom
       .transactionBuilder
       .transfer()
       .sign(params.passphrase)

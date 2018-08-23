@@ -1,6 +1,6 @@
 'use strict'
-const { Block, Transaction } = require('@arkecosystem/crypto').models
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const { Block, Transaction } = require('@phantomcore/crypto').models
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 
 /**
  * The transactions migration.

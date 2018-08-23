@@ -1,7 +1,7 @@
 'use strict'
 
 const generateWallets = require('../../lib/utils/generate-wallets')
-const arkjs = require('arkjs')
+const phantomjs = require('phantomjs')
 
 describe('Utils - Generate Wallets', () => {
   it('should be a function', () => {
@@ -27,18 +27,18 @@ describe('Utils - Generate Wallets', () => {
   it('should give a wallet with a valid address', () => {
     const wallet = generateWallets(1)[0]
 
-    expect(arkjs.crypto.validateAddress(wallet.address)).toBeTruthy()
+    expect(phantomjs.crypto.validateAddress(wallet.address)).toBeTruthy()
   })
 
   it('should give a wallet with a valid passphrase', () => {
     const wallet = generateWallets(1)[0]
-    const keys = arkjs.crypto.getKeys(wallet.passphrase)
+    const keys = phantomjs.crypto.getKeys(wallet.passphrase)
 
     expect(keys).toContainKeys([
       'publicKey',
       'privateKey'
     ])
     expect(wallet.passphrase.split(' ').length).toBe(12)
-    expect(arkjs.crypto.getAddress(keys.publicKey)).toBeTruthy()
+    expect(phantomjs.crypto.getAddress(keys.publicKey)).toBeTruthy()
   })
 })

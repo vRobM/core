@@ -1,4 +1,4 @@
-const { SECOND_SIGNATURE } = require('@arkecosystem/crypto').constants
+const { SECOND_SIGNATURE } = require('@phantomcore/crypto').constants
 
 expect.extend({
   toBeSecondSignatureType: require('../../../../lib/matchers/transactions/types/second-signature')

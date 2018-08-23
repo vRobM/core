@@ -8,14 +8,14 @@ const glob = require('tiny-glob')
 const path = require('path')
 const fs = require('fs-extra')
 
-const { ConnectionInterface } = require('@arkecosystem/core-database')
+const { ConnectionInterface } = require('@phantomcore/core-database')
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const logger = container.resolvePlugin('logger')
 const emitter = container.resolvePlugin('event-emitter')
 
-const { Block, Transaction } = require('@arkecosystem/crypto').models
+const { Block, Transaction } = require('@phantomcore/crypto').models
 
 const SPV = require('./spv')
 const QueryBuilder = require('./query-builder')
@@ -42,7 +42,7 @@ module.exports = class SequelizeConnection extends ConnectionInterface {
       ...config,
       ...{
         operatorsAliases: Op,
-        logging: process.env.NODE_ENV === 'test' && !process.env.ARK_CI_TEST
+        logging: process.env.NODE_ENV === 'test' && !process.env.PHANTOM_CI_TEST
       }
     })
 
@@ -270,10 +270,10 @@ module.exports = class SequelizeConnection extends ConnectionInterface {
   async buildWallets (height) {
     this.walletManager.reset()
 
-    const spvPath = `${process.env.ARK_PATH_DATA}/spv.json`
+    const spvPath = `${process.env.PHANTOM_PATH_DATA}/spv.json`
     if (fs.existsSync(spvPath)) {
       fs.removeSync(spvPath)
-      logger.info('ARK Core ended unexpectedly - resuming from where we left off :runner:')
+      logger.info('PHANTOM Core ended unexpectedly - resuming from where we left off :runner:')
       return this.loadWallets()
     }
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const { VOTE } = require('@arkecosystem/crypto').constants
+const { VOTE } = require('@phantomcore/crypto').constants
 
 module.exports = (received) => {
   return {

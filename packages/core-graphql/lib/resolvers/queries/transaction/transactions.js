@@ -1,7 +1,7 @@
 'use strict';
 
-const database = require('@arkecosystem/core-container').resolvePlugin('database')
-const { constants } = require('@arkecosystem/crypto')
+const database = require('@phantomcore/core-container').resolvePlugin('database')
+const { constants } = require('@phantomcore/crypto')
 const { formatOrderBy, unserializeTransactions } = require('../../../helpers')
 
 module.exports = async (root, args) => {

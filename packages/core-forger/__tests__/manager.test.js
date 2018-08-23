@@ -4,7 +4,7 @@ const app = require('./__support__/setup')
 const defaultConfig = require('../lib/defaults')
 const delegate = require('./__fixtures__/delegate')
 
-const { Delegate } = require('@arkecosystem/crypto').models
+const { Delegate } = require('@phantomcore/crypto').models
 
 jest.setTimeout(30000)
 
@@ -75,14 +75,14 @@ describe('Forger Manager', () => {
 
     it('should be ok', async () => {
       manager.delegates = [{
-        username: 'arkxdev',
+        username: 'phantomxdev',
         publicKey: '0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0'
       }]
 
       const delegate = await manager.__isDelegateActivated('0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0')
 
       expect(delegate).toBeObject()
-      expect(delegate.username).toBe('arkxdev')
+      expect(delegate.username).toBe('phantomxdev')
       expect(delegate.publicKey).toBe('0310ad026647eed112d1a46145eed58b8c19c67c505a67f1199361a511ce7860c0')
     })
   })

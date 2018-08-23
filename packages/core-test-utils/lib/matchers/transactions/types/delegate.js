@@ -1,6 +1,6 @@
 'use strict'
 
-const { DELEGATE } = require('@arkecosystem/crypto').constants
+const { DELEGATE } = require('@phantomcore/crypto').constants
 
 module.exports = (received) => {
   return {

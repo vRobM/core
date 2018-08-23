@@ -1,99 +1,99 @@
 module.exports = {
-  '@arkecosystem/core-event-emitter': {},
-  '@arkecosystem/core-config': {},
-  '@arkecosystem/core-logger': {},
-  '@arkecosystem/core-logger-winston': {
+  '@phantomcore/core-event-emitter': {},
+  '@phantomcore/core-config': {},
+  '@phantomcore/core-logger': {},
+  '@phantomcore/core-logger-winston': {
     transports: {
       console: {
         options: {
           colorize: true,
-          level: process.env.ARK_LOG_LEVEL || 'debug'
+          level: process.env.PHANTOM_LOG_LEVEL || 'debug'
         }
       },
       dailyRotate: {
         options: {
-          filename: process.env.ARK_LOG_FILE || `${process.env.ARK_PATH_DATA}/logs/core/${process.env.ARK_NETWORK_NAME}/%DATE%.log`,
+          filename: process.env.PHANTOM_LOG_FILE || `${process.env.PHANTOM_PATH_DATA}/logs/core/${process.env.PHANTOM_NETWORK_NAME}/%DATE%.log`,
           datePattern: 'YYYY-MM-DD',
-          level: process.env.ARK_LOG_LEVEL || 'debug',
+          level: process.env.PHANTOM_LOG_LEVEL || 'debug',
           zippedArchive: true
         }
       }
     }
   },
-  '@arkecosystem/core-database': {
-    snapshots: `${process.env.ARK_PATH_DATA}/snapshots/${process.env.ARK_NETWORK_NAME}`
+  '@phantomcore/core-database': {
+    snapshots: `${process.env.PHANTOM_PATH_DATA}/snapshots/${process.env.PHANTOM_NETWORK_NAME}`
   },
-  '@arkecosystem/core-database-sequelize': {
+  '@phantomcore/core-database-sequelize': {
     dialect: 'sqlite',
-    storage: process.env.ARK_DB_STORAGE || `${process.env.ARK_PATH_DATA}/database/${process.env.ARK_NETWORK_NAME}_.sqlite`,
-    // host: process.env.ARK_DB_HOST || 'localhost',
-    // dialect: process.env.ARK_DB_DIALECT || 'postgres',
-    // username: process.env.ARK_DB_USERNAME || 'ark',
-    // password: process.env.ARK_DB_PASSWORD || 'password',
-    // database: process.env.ARK_DB_DATABASE || 'ark_testnet',
-    logging: process.env.ARK_DB_LOGGING,
+    storage: process.env.PHANTOM_DB_STORAGE || `${process.env.PHANTOM_PATH_DATA}/database/${process.env.PHANTOM_NETWORK_NAME}_.sqlite`,
+    // host: process.env.PHANTOM_DB_HOST || 'localhost',
+    // dialect: process.env.PHANTOM_DB_DIALECT || 'postgres',
+    // username: process.env.PHANTOM_DB_USERNAME || 'phantom',
+    // password: process.env.PHANTOM_DB_PASSWORD || 'password',
+    // database: process.env.PHANTOM_DB_DATABASE || 'phantom_testnet',
+    logging: process.env.PHANTOM_DB_LOGGING,
     redis: {
-      host: process.env.ARK_REDIS_HOST || 'localhost',
-      port: process.env.ARK_REDIS_PORT || 6379
+      host: process.env.PHANTOM_REDIS_HOST || 'localhost',
+      port: process.env.PHANTOM_REDIS_PORT || 6379
     }
   },
-  '@arkecosystem/core-transaction-pool': {},
-  '@arkecosystem/core-transaction-pool-redis': {
-    enabled: !process.env.ARK_TRANSACTION_POOL_DISABLED,
-    key: 'ark-testnet',
-    maxTransactionsPerSender: process.env.ARK_TRANSACTION_POOL_MAX_PER_SENDER || 100,
+  '@phantomcore/core-transaction-pool': {},
+  '@phantomcore/core-transaction-pool-redis': {
+    enabled: !process.env.PHANTOM_TRANSACTION_POOL_DISABLED,
+    key: 'phantom-testnet',
+    maxTransactionsPerSender: process.env.PHANTOM_TRANSACTION_POOL_MAX_PER_SENDER || 100,
     whitelist: [],
     redis: {
-      host: process.env.ARK_REDIS_HOST || 'localhost',
-      port: process.env.ARK_REDIS_PORT || 6379
+      host: process.env.PHANTOM_REDIS_HOST || 'localhost',
+      port: process.env.PHANTOM_REDIS_PORT || 6379
     }
   },
-  '@arkecosystem/core-p2p': {
-    host: process.env.ARK_P2P_HOST || '0.0.0.0',
-    port: process.env.ARK_P2P_PORT || 4000,
+  '@phantomcore/core-p2p': {
+    host: process.env.PHANTOM_P2P_HOST || '0.0.0.0',
+    port: process.env.PHANTOM_P2P_PORT || 4000,
     whitelist: ['127.0.0.1', '::ffff:127.0.0.1', '192.168.*']
   },
-  '@arkecosystem/core-blockchain': {
+  '@phantomcore/core-blockchain': {
     fastRebuild: true
   },
-  '@arkecosystem/core-api': {
-    enabled: !process.env.ARK_API_DISABLED,
-    host: process.env.ARK_API_HOST || '0.0.0.0',
-    port: process.env.ARK_API_PORT || 4003,
+  '@phantomcore/core-api': {
+    enabled: !process.env.PHANTOM_API_DISABLED,
+    host: process.env.PHANTOM_API_HOST || '0.0.0.0',
+    port: process.env.PHANTOM_API_PORT || 4003,
     whitelist: ['*']
   },
-  '@arkecosystem/core-webhooks': {
-    enabled: process.env.ARK_WEBHOOKS_ENABLED,
+  '@phantomcore/core-webhooks': {
+    enabled: process.env.PHANTOM_WEBHOOKS_ENABLED,
     database: {
       dialect: 'sqlite',
-      storage: `${process.env.ARK_PATH_DATA}/database/${process.env.ARK_NETWORK_NAME}/webhooks.sqlite`,
-      logging: process.env.ARK_DB_LOGGING
+      storage: `${process.env.PHANTOM_PATH_DATA}/database/${process.env.PHANTOM_NETWORK_NAME}/webhooks.sqlite`,
+      logging: process.env.PHANTOM_DB_LOGGING
     },
     redis: {
-      host: process.env.ARK_REDIS_HOST || 'localhost',
-      port: process.env.ARK_REDIS_PORT || 6379
+      host: process.env.PHANTOM_REDIS_HOST || 'localhost',
+      port: process.env.PHANTOM_REDIS_PORT || 6379
     },
     server: {
-      enabled: process.env.ARK_WEBHOOKS_API_ENABLED,
-      host: process.env.ARK_WEBHOOKS_HOST || '0.0.0.0',
-      port: process.env.ARK_WEBHOOKS_PORT || 4004,
+      enabled: process.env.PHANTOM_WEBHOOKS_API_ENABLED,
+      host: process.env.PHANTOM_WEBHOOKS_HOST || '0.0.0.0',
+      port: process.env.PHANTOM_WEBHOOKS_PORT || 4004,
       whitelist: ['127.0.0.1', '::ffff:127.0.0.1', '192.168.*']
     }
   },
-  '@arkecosystem/core-graphql': {
-    enabled: process.env.ARK_GRAPHQL_ENABLED,
-    host: process.env.ARK_GRAPHQL_HOST || '0.0.0.0',
-    port: process.env.ARK_GRAPHQL_PORT || 4005,
+  '@phantomcore/core-graphql': {
+    enabled: process.env.PHANTOM_GRAPHQL_ENABLED,
+    host: process.env.PHANTOM_GRAPHQL_HOST || '0.0.0.0',
+    port: process.env.PHANTOM_GRAPHQL_PORT || 4005,
     path: '/graphql',
     graphiql: true
   },
-  '@arkecosystem/core-forger': {
+  '@phantomcore/core-forger': {
     hosts: ['http://127.0.0.1:4000']
   },
-  '@arkecosystem/core-json-rpc': {
-    enabled: process.env.ARK_JSON_RPC_ENABLED,
-    host: process.env.ARK_JSON_RPC_HOST || '0.0.0.0',
-    port: process.env.ARK_JSON_RPC_PORT || 8080,
+  '@phantomcore/core-json-rpc': {
+    enabled: process.env.PHANTOM_JSON_RPC_ENABLED,
+    host: process.env.PHANTOM_JSON_RPC_HOST || '0.0.0.0',
+    port: process.env.PHANTOM_JSON_RPC_PORT || 8080,
     allowRemote: true,
     whitelist: ['127.0.0.1', '::ffff:127.0.0.1', '192.168.*']
   }

@@ -1,12 +1,12 @@
 'use strict'
 
-const { TransactionPoolInterface } = require('@arkecosystem/core-transaction-pool')
+const { TransactionPoolInterface } = require('@phantomcore/core-transaction-pool')
 const Redis = require('ioredis')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const emitter = container.resolvePlugin('event-emitter')
-const ark = require('@arkecosystem/crypto')
-const { Transaction } = ark.models
+const phantom = require('@phantomcore/crypto')
+const { Transaction } = phantom.models
 
 module.exports = class TransactionPool extends TransactionPoolInterface {
   /**

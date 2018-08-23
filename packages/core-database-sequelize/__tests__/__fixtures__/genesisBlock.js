@@ -1,4 +1,4 @@
-const { Block } = require('@arkecosystem/crypto').models
+const { Block } = require('@phantomcore/crypto').models
 
 module.exports = new Block({
   'version': 0,

@@ -28,7 +28,7 @@ describe('Transfer transaction', () => {
     }
   })
 
-  it('should return an array sending 20 ark', () => {
+  it('should return an array sending 20 phantom', () => {
     for (let i = 0; i < transactions.length; i++) {
       expect(transactions[i]).toMatchObject({ amount: amount * Math.pow(10, 8) })
     }

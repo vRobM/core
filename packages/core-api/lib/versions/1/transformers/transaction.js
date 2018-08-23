@@ -1,12 +1,12 @@
 'use strict'
 
-const { crypto } = require('@arkecosystem/crypto')
+const { crypto } = require('@phantomcore/crypto')
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const blockchain = container.resolvePlugin('blockchain')
 
-const { Transaction } = require('@arkecosystem/crypto').models
+const { Transaction } = require('@phantomcore/crypto').models
 
 /**
  * Turns a "transaction" object into a generic object.

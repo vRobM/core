@@ -1,7 +1,7 @@
 'use strict'
 
 const Hapi = require('hapi')
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 
 function registerMethods (server, group) {
   Object.values(require(`./methods/${group}`)).forEach(method => {

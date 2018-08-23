@@ -2,7 +2,7 @@
 const Promise = require('bluebird')
 const axios = require('axios')
 const sample = require('lodash/sample')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const config = container.resolvePlugin('config')
 

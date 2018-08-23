@@ -1,5 +1,5 @@
 const BaseHandler = require('../../../lib/handlers/transactions/handler')
-const { ARKTOSHI } = require('../../../lib/constants')
+const { PHANTOMTOSHI } = require('../../../lib/constants')
 
 let handler
 let wallet
@@ -59,7 +59,7 @@ describe('Handler', () => {
     it('should be ok', () => {
       handler.apply = jest.fn()
 
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.applyTransactionToSender(wallet, transaction)
@@ -72,7 +72,7 @@ describe('Handler', () => {
 
       transaction.senderPublicKey = 'p'.repeat(66)
 
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.applyTransactionToSender(wallet, transaction)
@@ -89,7 +89,7 @@ describe('Handler', () => {
     it('should be ok', () => {
       handler.revert = jest.fn()
 
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.revertTransactionForSender(wallet, transaction)
@@ -102,7 +102,7 @@ describe('Handler', () => {
 
       transaction.senderPublicKey = 'p'.repeat(66)
 
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.revertTransactionForSender(wallet, transaction)
@@ -117,7 +117,7 @@ describe('Handler', () => {
     })
 
     it('should be ok', () => {
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.applyTransactionToRecipient(wallet, transaction)
@@ -128,7 +128,7 @@ describe('Handler', () => {
     it('should not be ok', () => {
       transaction.recipientId = 'invalid-recipientId'
 
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.applyTransactionToRecipient(wallet, transaction)
@@ -143,7 +143,7 @@ describe('Handler', () => {
     })
 
     it('should be ok', () => {
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.revertTransactionForRecipient(wallet, transaction)
@@ -154,7 +154,7 @@ describe('Handler', () => {
     it('should not be ok', () => {
       transaction.recipientId = 'invalid-recipientId'
 
-      const initialBalance = 1000 * ARKTOSHI
+      const initialBalance = 1000 * PHANTOMTOSHI
       wallet.balance = initialBalance
 
       handler.revertTransactionForRecipient(wallet, transaction)

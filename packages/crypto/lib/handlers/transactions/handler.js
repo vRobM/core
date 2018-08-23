@@ -1,6 +1,6 @@
 const { crypto } = require('../../crypto')
 const configManager = require('../../managers/config')
-const { transactionValidator } = require('@arkecosystem/validation')
+const { transactionValidator } = require('@phantomcore/validation')
 
 module.exports = class Handler {
   /**

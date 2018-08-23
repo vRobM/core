@@ -1,22 +1,22 @@
 'use strict'
 
 const path = require('path')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 exports.setUp = async () => {
-  process.env.ARK_SKIP_BLOCKCHAIN = true
+  process.env.PHANTOM_SKIP_BLOCKCHAIN = true
 
   await container.setUp({
-    data: '~/.ark',
+    data: '~/.phantom',
     config: path.resolve(__dirname, '../../../core/lib/config/testnet'),
-    token: 'ark',
+    token: 'phantom',
     network: 'testnet'
   }, {
-    exit: '@arkecosystem/core-blockchain',
+    exit: '@phantomcore/core-blockchain',
     exclude: [
-      '@arkecosystem/core-p2p',
-      '@arkecosystem/core-transaction-pool',
-      '@arkecosystem/core-transaction-pool-redis'
+      '@phantomcore/core-p2p',
+      '@phantomcore/core-transaction-pool',
+      '@phantomcore/core-transaction-pool-redis'
     ]
   })
 }

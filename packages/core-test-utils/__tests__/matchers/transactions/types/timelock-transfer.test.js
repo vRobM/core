@@ -1,4 +1,4 @@
-const { TIMELOCK_TRANSFER } = require('@arkecosystem/crypto').constants
+const { TIMELOCK_TRANSFER } = require('@phantomcore/crypto').constants
 
 expect.extend({
   toBeTimelockTransferType: require('../../../../lib/matchers/transactions/types/timelock-transfer')

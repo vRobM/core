@@ -1,7 +1,7 @@
 'use strict'
 
 const app = require('../__support__/setup')
-const { crypto } = require('@arkecosystem/crypto')
+const { crypto } = require('@phantomcore/crypto')
 
 let genesisBlock
 let repository

@@ -2,10 +2,10 @@
 
 const Boom = require('boom')
 
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
-const { TransactionGuard } = require('@arkecosystem/core-transaction-pool')
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
+const { TransactionGuard } = require('@phantomcore/core-transaction-pool')
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const database = container.resolvePlugin('database')
 const logger = container.resolvePlugin('logger')

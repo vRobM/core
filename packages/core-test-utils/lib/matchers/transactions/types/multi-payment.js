@@ -1,6 +1,6 @@
 'use strict'
 
-const { MULTI_PAYMENT } = require('@arkecosystem/crypto').constants
+const { MULTI_PAYMENT } = require('@phantomcore/crypto').constants
 
 module.exports = (received) => {
   return {

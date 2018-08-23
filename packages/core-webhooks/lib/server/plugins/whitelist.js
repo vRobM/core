@@ -3,7 +3,7 @@
 const Boom = require('boom')
 const requestIp = require('request-ip')
 const mm = require('micromatch')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 /**
  * The register method used by hapi.js.

@@ -1,11 +1,11 @@
-![ARK Core](https://i.imgur.com/1aP6F2o.png)
+![PHANTOM Core](https://i.imgur.com/dPHOKrL.jpg))
 
-# ARK Core - Database Interface
+# PHANTOM Core - Database Interface
 
 ## Installation
 
 ```bash
-yarn add @arkecosystem/core-database
+yarn add @phantomcore/core-database
 ```
 
 ## Configuration
@@ -20,7 +20,7 @@ module.exports = {
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phantom.org. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 

@@ -1,7 +1,7 @@
 'use strict'
 
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
-const database = require('@arkecosystem/core-container').resolvePlugin('database')
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
+const database = require('@phantomcore/core-container').resolvePlugin('database')
 const utils = require('../utils')
 const schema = require('../schema/votes')
 

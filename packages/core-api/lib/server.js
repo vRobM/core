@@ -1,7 +1,7 @@
 'use strict'
 
 const Hapi = require('hapi')
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 
 /**
  * Create a new hapi.js server.
@@ -46,7 +46,7 @@ module.exports = async (config) => {
       validVersions: config.versions.valid,
       defaultVersion: config.versions.default,
       basePath: '/api/',
-      vendorName: 'ark-core-api'
+      vendorName: 'phantom-core-api'
     }
   })
 

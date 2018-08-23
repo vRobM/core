@@ -1,4 +1,4 @@
-const { MULTI_SIGNATURE } = require('@arkecosystem/crypto').constants
+const { MULTI_SIGNATURE } = require('@phantomcore/crypto').constants
 
 expect.extend({
   toBeMultiSignatureType: require('../../../../lib/matchers/transactions/types/multi-signature')

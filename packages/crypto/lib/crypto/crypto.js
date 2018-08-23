@@ -1,7 +1,7 @@
 // const createHash = require('create-hash')
 const bs58check = require('bs58check')
 // const crypto = require('crypto')
-const arkjsv1 = require('arkjsv1')
+const phantomjsv1 = require('phantomjsv1')
 // const { Buffer } = require('buffer/')
 
 const configManager = require('../managers/config')
@@ -29,7 +29,7 @@ class Crypto {
    */
   getBytes (transaction, skipSignature, skipSecondSignature) {
     if (!transaction.version || transaction.version === 1) {
-      return arkjsv1.crypto.getBytes(transaction, skipSignature, skipSecondSignature)
+      return phantomjsv1.crypto.getBytes(transaction, skipSignature, skipSecondSignature)
     }
   }
 
@@ -40,7 +40,7 @@ class Crypto {
    */
   getId (transaction) {
     if (!transaction.version || transaction.version === 1) {
-      return arkjsv1.crypto.getId(transaction)
+      return phantomjsv1.crypto.getId(transaction)
     }
 
     // TODO: Enable AIP11 id here
@@ -54,7 +54,7 @@ class Crypto {
    */
   getHash (transaction, skipSignature, skipSecondSignature) {
     if (!transaction.version || transaction.version === 1) {
-      return arkjsv1.crypto.getHash(transaction, skipSignature, skipSecondSignature)
+      return phantomjsv1.crypto.getHash(transaction, skipSignature, skipSecondSignature)
     }
 
     // TODO: Enable AIP11 id here
@@ -69,7 +69,7 @@ class Crypto {
    */
   sign (transaction, keys) {
     if (!transaction.version || transaction.version === 1) {
-      return arkjsv1.crypto.sign(transaction, keys)
+      return phantomjsv1.crypto.sign(transaction, keys)
     }
 
     const hash = this.getHash(transaction, false, false)
@@ -90,7 +90,7 @@ class Crypto {
    */
   secondSign (transaction, keys) {
     if (!transaction.version || transaction.version === 1) {
-      return arkjsv1.crypto.secondSign(transaction, keys)
+      return phantomjsv1.crypto.secondSign(transaction, keys)
     }
 
     const hash = this.getHash(transaction, false, true)
@@ -111,7 +111,7 @@ class Crypto {
    */
   verify (transaction, network) {
     if (!transaction.version || transaction.version === 1) {
-      return arkjsv1.crypto.verify(transaction, network)
+      return phantomjsv1.crypto.verify(transaction, network)
     }
 
     // TODO: enable AIP11 when ready here
@@ -128,7 +128,7 @@ class Crypto {
   verifySecondSignature (transaction, publicKey, network) {
     if (!transaction.version || transaction.version === 1) {
       try {
-        return arkjsv1.crypto.verifySecondSignature(transaction, publicKey, network)
+        return phantomjsv1.crypto.verifySecondSignature(transaction, publicKey, network)
       } catch (error) {
         return false
       }

@@ -1,5 +1,5 @@
 const bip39 = require('bip39')
-const { crypto } = require('arkjs')
+const { crypto } = require('phantomjs')
 
 module.exports = (quantity = 1) => {
   let wallets = []

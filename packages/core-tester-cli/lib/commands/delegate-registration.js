@@ -1,6 +1,6 @@
 'use strict'
 
-const ark = require('arkjs')
+const phantom = require('phantomjs')
 const delay = require('delay')
 const utils = require('../utils')
 const config = require('../config')
@@ -32,7 +32,7 @@ module.exports = async (options) => {
 
     wallet.username = wallet.username.toLowerCase().replace(/ /g, '_')
 
-    const transaction = ark.delegate.createDelegate(
+    const transaction = phantom.delegate.createDelegate(
       wallet.passphrase,
       wallet.username,
       config.secondPassphrase,

@@ -1,6 +1,6 @@
 'use strict'
 
-const { SECOND_SIGNATURE } = require('@arkecosystem/crypto').constants
+const { SECOND_SIGNATURE } = require('@phantomcore/crypto').constants
 
 module.exports = (received) => {
   return {

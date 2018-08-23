@@ -1,13 +1,13 @@
 expect.extend({
-  toBeArkAddress: require('../../../lib/matchers/fields/address')
+  toBePhantomAddress: require('../../../lib/matchers/fields/address')
 })
 
-describe('.toBeArkAddress', () => {
+describe('.toBePhantomAddress', () => {
   test('passes when given a valid address', () => {
-    expect('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN').toBeArkAddress()
+    expect('DARiJqhogp2Lu6bxufUFQQMuMyZbxjCydN').toBePhantomAddress()
   })
 
   test('fails when not given a valid address', () => {
-    expect('invalid-address').not.toBeArkAddress()
+    expect('invalid-address').not.toBePhantomAddress()
   })
 })

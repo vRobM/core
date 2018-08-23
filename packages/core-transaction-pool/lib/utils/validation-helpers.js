@@ -1,7 +1,7 @@
 'use strict'
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const bs58check = require('bs58check')
-const { configManager } = require('@arkecosystem/crypto')
+const { configManager } = require('@phantomcore/crypto')
 const logger = container.resolvePlugin('logger')
 const database = container.resolvePlugin('database')
 

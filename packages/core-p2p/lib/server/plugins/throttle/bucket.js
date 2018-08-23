@@ -1,4 +1,4 @@
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 const { RateLimiter } = require('limiter')
 
 class Bucket {

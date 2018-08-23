@@ -1,6 +1,6 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const p2p = container.resolvePlugin('p2p')
 
 const utils = require('../utils')

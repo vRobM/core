@@ -5,7 +5,7 @@ const Op = Sequelize.Op
 const Umzug = require('umzug')
 const path = require('path')
 const fs = require('fs-extra')
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 
 class Database {
   /**

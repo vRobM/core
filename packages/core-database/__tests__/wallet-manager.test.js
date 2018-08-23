@@ -2,9 +2,9 @@
 
 const app = require('./__support__/setup')
 
-const { Block, Transaction, Wallet } = require('@arkecosystem/crypto').models
-const { transactionBuilder } = require('@arkecosystem/crypto')
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
+const { Block, Transaction, Wallet } = require('@phantomcore/crypto').models
+const { transactionBuilder } = require('@phantomcore/crypto')
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
 
 const block = new Block(require('./__fixtures__/block.json')) // eslint-disable-line no-unused-vars
 const walletData1 = require('./__fixtures__/wallets.json')[0]

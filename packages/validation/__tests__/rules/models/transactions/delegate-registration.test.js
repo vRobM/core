@@ -1,7 +1,7 @@
 'use strict'
 
 const rule = require('../../../../lib/rules/models/transactions/delegate-registration')
-const { constants, transactionBuilder } = require('@arkecosystem/crypto')
+const { constants, transactionBuilder } = require('@phantomcore/crypto')
 
 let transaction
 beforeEach(() => {
@@ -26,7 +26,7 @@ describe('Delegate Registration Transaction Rule', () => {
 
   it('should be invalid due to non-zero amount', () => {
     transaction.usernameAsset('delegate1')
-               .amount(10 * constants.ARKTOSHI)
+               .amount(10 * constants.PHANTOMTOSHI)
                .sign('passphrase')
 
     expect(rule(transaction.getStruct()).errors).not.toBeNull()
@@ -87,7 +87,7 @@ describe('Delegate Registration Transaction Rule', () => {
   it('should be invalid due to wrong transaction type', () => {
     transaction = transactionBuilder.transfer()
     transaction.recipientId(null)
-               .amount(10 * constants.ARKTOSHI)
+               .amount(10 * constants.PHANTOMTOSHI)
                .sign('passphrase')
 
     expect(rule(transaction.getStruct()).errors).not.toBeNull()

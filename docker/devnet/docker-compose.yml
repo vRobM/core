@@ -3,7 +3,7 @@ services:
 
   redis:
     image: "redis:alpine"
-    container_name: ark-redis
+    container_name: phantom-redis
     ports:
       - '127.0.0.1:6379:6379'
     volumes:
@@ -11,25 +11,25 @@ services:
 
   postgres:
     image: "postgres:alpine"
-    container_name: ark-postgres
+    container_name: phantom-postgres
     ports:
       - '127.0.0.1:5432:5432'
     volumes:
       - 'postgres:/var/lib/postgresql/data'
     environment:
      POSTGRES_PASSWORD: password
-     POSTGRES_DB: ark_devnet
-     POSTGRES_USER: ark
+     POSTGRES_DB: phantom_devnet
+     POSTGRES_USER: phantom
 
-  ark-core:
+  phantom-core:
     build: .
-    image: ark-core
-    container_name: ark-core
+    image: phantom-core
+    container_name: phantom-core
     ports:
      - "4002:4002"
      - "4003:4003"
     volumes:
-     - ark-core:/ark-core
+     - phantom-core:/phantom-core
     tty: true
     privileged: true
     links:
@@ -47,7 +47,7 @@ services:
 volumes:
   redis:
   postgres:
-  ark-core:
+  phantom-core:
     driver_opts:
       type: none
       device: $PWD/../../

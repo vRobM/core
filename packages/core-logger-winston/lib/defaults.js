@@ -6,7 +6,7 @@ module.exports = {
       constructor: 'Console',
       options: {
         colorize: true,
-        level: process.env.ARK_LOG_LEVEL || 'debug',
+        level: process.env.PHANTOM_LOG_LEVEL || 'debug',
         timestamp: () => Date.now(),
         formatter: (info) => require('./formatter')(info)
       }
@@ -15,9 +15,9 @@ module.exports = {
       package: 'winston-daily-rotate-file',
       constructor: 'DailyRotateFile',
       options: {
-        filename: process.env.ARK_LOG_FILE || `${process.env.ARK_PATH_DATA}/logs/core/${process.env.ARK_NETWORK_NAME}/%DATE%.log`,
+        filename: process.env.PHANTOM_LOG_FILE || `${process.env.PHANTOM_PATH_DATA}/logs/core/${process.env.PHANTOM_NETWORK_NAME}/%DATE%.log`,
         datePattern: 'YYYY-MM-DD',
-        level: process.env.ARK_LOG_LEVEL || 'debug',
+        level: process.env.PHANTOM_LOG_LEVEL || 'debug',
         zippedArchive: true
       }
     }

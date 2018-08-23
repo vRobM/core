@@ -2,13 +2,13 @@
 
 const Promise = require('bluebird')
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const database = container.resolvePlugin('database')
 
-const ark = require('@arkecosystem/crypto')
-const { slots } = ark
-const { TRANSACTION_TYPES } = ark.constants
+const phantom = require('@phantomcore/crypto')
+const { slots } = phantom
+const { TRANSACTION_TYPES } = phantom.constants
 
 const memory = require('./memory')
 const PoolWalletManager = require('./pool-wallet-manager')

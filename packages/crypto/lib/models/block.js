@@ -6,7 +6,7 @@ const configManager = require('../managers/config')
 const slots = require('../crypto/slots')
 const ECPair = require('../crypto/ecpair')
 const ECSignature = require('../crypto/ecsignature')
-const { outlookTable } = require('../constants').CONFIGURATIONS.ARK.MAINNET
+const { outlookTable } = require('../constants').CONFIGURATIONS.PHANTOM.MAINNET
 
 const toBytesHex = (buffer) => {
   let temp = buffer.toString('hex')
@@ -35,7 +35,7 @@ const applyV1Fix = (data) => {
 }
 
 /**
- * TODO copy some parts to ArkDocs
+ * TODO copy some parts to PhantomDocs
  * @classdesc This model holds the block data, its verification and serialization
  *
  * A Block model stores on the db:
@@ -45,9 +45,9 @@ const applyV1Fix = (data) => {
  *   - previousBlock (id of the previous block)
  *   - height
  *   - numberOfTransactions
- *   - totalAmount (in arktoshi)
- *   - totalFee (in arktoshi)
- *   - reward (in arktoshi)
+ *   - totalAmount (in phantomtoshi)
+ *   - totalFee (in phantomtoshi)
+ *   - reward (in phantomtoshi)
  *   - payloadHash (hash of the transactions)
  *   - payloadLength (total length in bytes of the IDs of the transactions)
  *   - generatorPublicKey (public key of the delegate that forged this block)

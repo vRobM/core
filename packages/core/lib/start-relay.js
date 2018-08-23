@@ -1,6 +1,6 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 /**
  * Start a relay.
@@ -9,9 +9,9 @@ const container = require('@arkecosystem/core-container')
  */
 module.exports = async (options) => {
   await container.setUp(options, {
-    exclude: ['@arkecosystem/core-forger'],
+    exclude: ['@phantomcore/core-forger'],
     options: {
-      '@arkecosystem/core-blockchain': {
+      '@phantomcore/core-blockchain': {
         networkStart: options.networkStart
       }
     }

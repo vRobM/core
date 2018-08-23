@@ -1,4 +1,4 @@
-const { TRANSFER } = require('@arkecosystem/crypto').constants
+const { TRANSFER } = require('@phantomcore/crypto').constants
 
 expect.extend({
   toBeTransferType: require('../../../../lib/matchers/transactions/types/transfer')

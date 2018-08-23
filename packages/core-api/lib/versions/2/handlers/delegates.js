@@ -2,7 +2,7 @@
 
 const Boom = require('boom')
 const orderBy = require('lodash/orderBy')
-const database = require('@arkecosystem/core-container').resolvePlugin('database')
+const database = require('@phantomcore/core-container').resolvePlugin('database')
 const utils = require('../utils')
 const schema = require('../schema/delegates')
 

@@ -1,4 +1,4 @@
 module.exports = (joi) => ({
-  name: 'arkAddress',
+  name: 'phantomAddress',
   base: joi.string().alphanum().length(34)
 })

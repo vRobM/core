@@ -9,16 +9,16 @@ module.exports = (transaction) => {
     timestamp: engine.joi.number().min(0).required(),
     amount: engine.joi.number().valid(0).required(),
     fee: engine.joi.number().min(1).required(),
-    senderId: engine.joi.arkAddress(),
+    senderId: engine.joi.phantomAddress(),
     recipientId: engine.joi.empty(),
-    senderPublicKey: engine.joi.arkPublicKey().required(),
+    senderPublicKey: engine.joi.phantomPublicKey().required(),
     signature: engine.joi.string().alphanum().required(),
     signatures: engine.joi.array(),
     secondSignature: engine.joi.string().alphanum(),
     asset: engine.joi.object({
       delegate: engine.joi.object({
-        username: engine.joi.arkUsername().required(),
-        publicKey: engine.joi.arkPublicKey()
+        username: engine.joi.phantomUsername().required(),
+        publicKey: engine.joi.phantomPublicKey()
       }).required()
     }).required(),
     confirmations: engine.joi.number().min(0)

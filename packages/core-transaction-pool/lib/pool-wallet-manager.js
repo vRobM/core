@@ -1,12 +1,12 @@
 'use strict'
-const container = require('@arkecosystem/core-container')
-const { Wallet } = require('@arkecosystem/crypto').models
-const { WalletManager } = require('@arkecosystem/core-database')
+const container = require('@phantomcore/core-container')
+const { Wallet } = require('@phantomcore/crypto').models
+const { WalletManager } = require('@phantomcore/core-database')
 const logger = container.resolvePlugin('logger')
 const database = container.resolvePlugin('database')
 const config = container.resolvePlugin('config')
-const { crypto } = require('@arkecosystem/crypto')
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
+const { crypto } = require('@phantomcore/crypto')
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
 
 module.exports = class PoolWalletManager extends WalletManager {
   /**

@@ -1,5 +1,5 @@
 const Joi = require('joi')
-const ark = require('@arkecosystem/crypto')
+const phantom = require('@phantomcore/crypto')
 const bip39 = require('bip39')
 const bip38 = require('bip38')
 const database = require('../../../services/database')
@@ -17,10 +17,10 @@ module.exports = {
         wif: account.wif
       }
     } catch (error) {
-      const keys = ark.crypto.getKeys(bip39.generateMnemonic())
+      const keys = phantom.crypto.getKeys(bip39.generateMnemonic())
 
       const encryptedWif = bip38.encrypt(keys.d.toBuffer(32), true, params.bip38 + params.userId)
-      database.setUTF8(ark.utils.sha256(Buffer.from(params.userId)).toString('hex'), encryptedWif)
+      database.setUTF8(phantom.utils.sha256(Buffer.from(params.userId)).toString('hex'), encryptedWif)
 
       return {
         publicKey: keys.getPublicKeyBuffer().toString('hex'),

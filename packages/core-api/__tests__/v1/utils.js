@@ -1,7 +1,7 @@
 'use strict'
 
 const axios = require('axios')
-const { client, transactionBuilder, NetworkManager } = require('@arkecosystem/crypto')
+const { client, transactionBuilder, NetworkManager } = require('@phantomcore/crypto')
 
 class Helpers {
   request (method, path, params = {}) {

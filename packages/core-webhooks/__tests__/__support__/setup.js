@@ -1,38 +1,38 @@
 'use strict'
 
 const path = require('path')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 jest.setTimeout(60000)
 
 exports.setUp = async () => {
-  process.env.ARK_WEBHOOKS_ENABLED = true
+  process.env.PHANTOM_WEBHOOKS_ENABLED = true
 
   await container.setUp({
-    data: '~/.ark',
+    data: '~/.phantom',
     config: path.resolve(__dirname, '../../../core/lib/config/testnet'),
-    token: 'ark',
+    token: 'phantom',
     network: 'testnet'
   }, {
     exclude: [
-      '@arkecosystem/core-blockchain',
-      '@arkecosystem/core-api',
-      '@arkecosystem/core-graphql',
-      '@arkecosystem/core-forger'
+      '@phantomcore/core-blockchain',
+      '@phantomcore/core-api',
+      '@phantomcore/core-graphql',
+      '@phantomcore/core-forger'
     ]
   })
 
   await require('../../lib/manager').setUp({
     redis: {
-      host: process.env.ARK_REDIS_HOST || 'localhost',
-      port: process.env.ARK_REDIS_PORT || 6379
+      host: process.env.PHANTOM_REDIS_HOST || 'localhost',
+      port: process.env.PHANTOM_REDIS_PORT || 6379
     }
   })
 
   await require('../../lib/server')({
     enabled: false,
-    host: process.env.ARK_WEBHOOKS_HOST || '0.0.0.0',
-    port: process.env.ARK_WEBHOOKS_PORT || 4004,
+    host: process.env.PHANTOM_WEBHOOKS_HOST || '0.0.0.0',
+    port: process.env.PHANTOM_WEBHOOKS_PORT || 4004,
     whitelist: ['127.0.0.1', '::ffff:127.0.0.1', '192.168.*'],
     pagination: {
       limit: 100,

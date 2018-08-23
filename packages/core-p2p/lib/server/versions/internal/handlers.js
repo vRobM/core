@@ -1,12 +1,12 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const requestIp = require('request-ip')
 const logger = container.resolvePlugin('logger')
 
-const { slots } = require('@arkecosystem/crypto')
-const { Transaction } = require('@arkecosystem/crypto').models
+const { slots } = require('@phantomcore/crypto')
+const { Transaction } = require('@phantomcore/crypto').models
 
 /**
  * @type {Object}

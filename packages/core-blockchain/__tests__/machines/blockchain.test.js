@@ -1,6 +1,6 @@
 'use strict'
 
-require('@arkecosystem/core-test-utils/lib') // eslint-disable-line no-unused-vars
+require('@phantomcore/core-test-utils/lib') // eslint-disable-line no-unused-vars
 
 const machine = require('../../lib/machines/blockchain')
 

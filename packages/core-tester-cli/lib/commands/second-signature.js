@@ -1,6 +1,6 @@
 'use strict'
 
-const ark = require('arkjs')
+const phantom = require('phantomjs')
 const config = require('../config')
 const delay = require('delay')
 const utils = require('../utils')
@@ -19,7 +19,7 @@ module.exports = async (options) => {
   wallets.forEach((wallet, i) => {
     wallet.secondPassphrase = config.secondPassphrase || wallet.passphrase
 
-    const transaction = ark.signature.createSignature(
+    const transaction = phantom.signature.createSignature(
       wallet.passphrase,
       wallet.secondPassphrase,
       utils.parseFee(options.signatureFee)

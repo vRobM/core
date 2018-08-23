@@ -1,16 +1,16 @@
-![ARK Core](https://i.imgur.com/1aP6F2o.png)
+![PHANTOM Core](https://i.imgur.com/dPHOKrL.jpg))
 
-# ARK Core - Deployer
+# PHANTOM Core - Deployer
 
 ## Installation
 
 ```bash
-yarn add @arkecosystem/core-deployer
+yarn add @phantomcore/core-deployer
 ```
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phantom.org. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 

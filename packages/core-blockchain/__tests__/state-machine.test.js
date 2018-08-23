@@ -1,6 +1,6 @@
 'use strict'
 
-require('@arkecosystem/core-test-utils/lib') // eslint-disable-line no-unused-vars
+require('@phantomcore/core-test-utils/lib') // eslint-disable-line no-unused-vars
 
 const { asValue } = require('awilix')
 
@@ -21,7 +21,7 @@ afterAll(async () => {
 })
 
 beforeEach(async () => {
-  process.env.ARK_SKIP_BLOCKCHAIN = true
+  process.env.PHANTOM_SKIP_BLOCKCHAIN = true
 
   // manually register the blockchain
   const plugin = require('../lib').plugin
@@ -39,7 +39,7 @@ beforeEach(async () => {
 })
 
 afterEach(async () => {
-  process.env.ARK_SKIP_BLOCKCHAIN = false
+  process.env.PHANTOM_SKIP_BLOCKCHAIN = false
 
   await blockchain.resetState()
 })

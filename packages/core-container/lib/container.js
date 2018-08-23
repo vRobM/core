@@ -125,7 +125,7 @@ module.exports = class Container {
 
       const logger = this.resolvePlugin('logger')
       logger.info('EXIT handled, trying to shut down gracefully')
-      logger.info('Stopping ARK Core')
+      logger.info('Stopping PHANTOM Core')
 
       try {
         logger.info('Saving wallets')
@@ -135,7 +135,7 @@ module.exports = class Container {
       // const lastBlock = this.resolvePlugin('blockchain').getLastBlock()
 
       // if (lastBlock) {
-      //   const spvFile = `${process.env.ARK_PATH_DATA}/spv.json`
+      //   const spvFile = `${process.env.PHANTOM_PATH_DATA}/spv.json`
       //   await fs.writeFile(spvFile, JSON.stringify(lastBlock.data))
       // }
 

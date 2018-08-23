@@ -13,7 +13,7 @@ exports.plugin = {
   async register (container, options) {
     const blockchain = new Blockchain(options.networkStart)
 
-    if (!process.env.ARK_SKIP_BLOCKCHAIN) {
+    if (!process.env.PHANTOM_SKIP_BLOCKCHAIN) {
       await blockchain.start()
     }
 

@@ -25,13 +25,13 @@ describe('API - HTTP Client', () => {
 
     describe('host', () => {
       it('should set the host', () => {
-        client = new HttpClient('http://ark.io')
-        expect(client.host).toBe('http://ark.io')
+        client = new HttpClient('http://phantom.org')
+        expect(client.host).toBe('http://phantom.org')
       })
 
       it('should remove the final slash of the host when necessary', () => {
-        client = new HttpClient('http://ark.io/')
-        expect(client.host).toBe('http://ark.io')
+        client = new HttpClient('http://phantom.org/')
+        expect(client.host).toBe('http://phantom.org')
       })
 
       it('should check that the host is not empty', () => {

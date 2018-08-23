@@ -10,7 +10,7 @@ const path = require('path')
 const { getRandomNumber, logger, updateConfig, writeEnv } = require('../lib/utils')
 const GenesisBlockBuilder = require('../lib/builder/genesis-block')
 
-process.env.ARK_PATH_CONFIG = path.resolve(os.homedir(), '.ark')
+process.env.PHANTOM_PATH_CONFIG = path.resolve(os.homedir(), '.phantom')
 
 commander
   .version(require('../package.json').version)
@@ -23,7 +23,7 @@ commander
   .option('--dbPort <value>', 'Database port', 5432)
   .option('--dbUsername <value>', 'Database username', 'node')
   .option('--dbPassword <value>', 'Database password', 'password')
-  .option('--dbDatabase <value>', 'Database name', `ark_${commander.name.toLowerCase()}`)
+  .option('--dbDatabase <value>', 'Database name', `phantom_${commander.name.toLowerCase()}`)
   .option('--explorerUrl <value>', 'URL to link to explorer', 'http://localhost:4200')
   .option('--activeDelegates <value>', 'How many forgers for the network [51]', 51)
   .option('--feeTransfer <value>', 'Fee for sending Transaction', 10000000)
@@ -43,7 +43,7 @@ commander
   .option('--totalPremine <value>', 'How many tokens initially added to genesis account [2100000000000000 (21 million)]', 2100000000000000)
   // .option('--max-tokens-per-account', 'Max amount of tokens per account [12500000000000000 (125 million)]')
   .option('--overwriteConfig', 'Overwrite current deployer config files [off]', false)
-  .option('--configPath <value>', 'Deployer config path destination [~/.ark/deployer]', `${process.env.ARK_PATH_CONFIG}/deployer`)
+  .option('--configPath <value>', 'Deployer config path destination [~/.phantom/deployer]', `${process.env.PHANTOM_PATH_CONFIG}/deployer`)
   .parse(process.argv)
 
 const { error, value } = Joi.validate(commander, require('../lib/schema.js'), { allowUnknown: true, convert: true })
@@ -64,7 +64,7 @@ if (fs.existsSync(options.configPath)) {
 }
 fs.ensureDirSync(options.configPath)
 fs.copySync(path.resolve(__dirname, `../../core/lib/config/${options.network}`), options.configPath)
-const networkPath = path.resolve(__dirname, `../../crypto/lib/networks/ark/${options.network}.json`)
+const networkPath = path.resolve(__dirname, `../../crypto/lib/networks/phantom/${options.network}.json`)
 if (!fs.existsSync(networkPath)) {
   logger.error(`Network '${options.network}' does not exist`)
   process.exit(1)
@@ -170,18 +170,18 @@ const plugins = {}
 for (let plugin in pluginsOriginal) {
   plugins[plugin] = {}
 }
-plugins['@arkecosystem/core-p2p'] = {
+plugins['@phantomcore/core-p2p'] = {
   host: options.nodeIp,
   port: options.p2pPort,
   whitelist: ['127.0.0.1', '192.168.*']
 }
-plugins['@arkecosystem/core-api'] = {
+plugins['@phantomcore/core-api'] = {
   enabled: true,
   host: options.nodeIp,
   port: options.apiPort,
   whitelist: ['*']
 }
-plugins['@arkecosystem/core-database-sequelize'] = {
+plugins['@phantomcore/core-database-sequelize'] = {
   host: options.dbHost,
   port: options.dbPort,
   username: options.dbUsername,
@@ -189,10 +189,10 @@ plugins['@arkecosystem/core-database-sequelize'] = {
   database: options.dbDatabase,
   dialect: 'postgres'
 }
-plugins['@arkecosystem/core-blockchain'] = {
+plugins['@phantomcore/core-blockchain'] = {
   fastRebuild: false
 }
-plugins['@arkecosystem/core-forger'] = {
+plugins['@phantomcore/core-forger'] = {
   hosts: [`http://${requestNodeIp}:${options.p2pPort}`]
 }
 
@@ -203,4 +203,4 @@ writeEnv({
   P2P_PORT: options.p2pPort,
   API_PORT: options.apiPort,
   DB_PORT: options.dbPort
-}, '~/.ark/.env')
+}, '~/.phantom/.env')

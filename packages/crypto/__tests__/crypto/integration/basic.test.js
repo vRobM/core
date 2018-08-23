@@ -3,12 +3,12 @@ const utils = require('../../../lib/crypto/utils')
 const ECPair = require('../../../lib/crypto/ecpair')
 
 const configManager = require('../../../lib/managers/config')
-const network = require('../../../lib/networks/ark/mainnet.json')
+const network = require('../../../lib/networks/phantom/mainnet.json')
 
 beforeEach(() => configManager.setConfig(network))
 
 describe('Basic Crypto', () => {
-  it('can generate a random ark address', () => {
+  it('can generate a random phantom address', () => {
     const keyPair = ECPair.makeRandom({
       rng: () => Buffer.from('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz')
     })

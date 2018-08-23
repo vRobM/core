@@ -19,7 +19,7 @@ const register = async (server, options) => {
  * @type {Object}
  */
 exports.plugin = {
-  name: 'ARK P2P API - Remote',
+  name: 'PHANTOM P2P API - Remote',
   version: '0.1.0',
   register
 }

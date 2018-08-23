@@ -1,5 +1,5 @@
-const container = require('@arkecosystem/core-container')
-const { feeManager, dynamicFeeManager } = require('@arkecosystem/crypto')
+const container = require('@phantomcore/core-container')
+const { feeManager, dynamicFeeManager } = require('@phantomcore/crypto')
 const config = container.resolvePlugin('config')
 
 /**

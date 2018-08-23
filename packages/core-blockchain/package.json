@@ -1,6 +1,6 @@
 {
-  "name": "@arkecosystem/core-blockchain",
-  "description": "Blockchain Manager for ARK Core",
+  "name": "@phantomcore/core-blockchain",
+  "description": "Blockchain Manager for PHANTOM Core",
   "version": "0.1.1",
   "contributors": [
     "François-Xavier Thoorens <fx@ark.io>",
@@ -11,17 +11,17 @@
   "main": "lib/index.js",
   "scripts": {
     "build:docs": "../../node_modules/.bin/jsdoc -c jsdoc.json",
-    "test": "ARK_ENV=test jest --forceExit",
-    "test:coverage": "ARK_ENV=test jest --coverage --forceExit",
-    "test:debug": "ARK_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
-    "test:watch": "ARK_ENV=test jest --runInBand --watch",
-    "test:watch:all": "ARK_ENV=test jest --runInBand --watchAll",
+    "test": "PHANTOM_ENV=test jest --forceExit",
+    "test:coverage": "PHANTOM_ENV=test jest --coverage --forceExit",
+    "test:debug": "PHANTOM_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
+    "test:watch": "PHANTOM_ENV=test jest --runInBand --watch",
+    "test:watch:all": "PHANTOM_ENV=test jest --runInBand --watchAll",
     "lint": "eslint ./ --fix",
     "depcheck": "depcheck ./"
   },
   "dependencies": {
-    "@arkecosystem/core-container": "^0.1.1",
-    "@arkecosystem/crypto": "^0.1.1",
+    "@phantomcore/core-container": "^0.1.1",
+    "@phantomcore/crypto": "^0.1.1",
     "async": "^2.6.1",
     "awilix": "^3.0.8",
     "delay": "^2.0.0",
@@ -32,6 +32,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@arkecosystem/core-test-utils": "^0.1.1"
+    "@phantomcore/core-test-utils": "^0.1.1"
   }
 }

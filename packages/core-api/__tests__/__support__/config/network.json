@@ -9,9 +9,9 @@
   "nethash": "d9acd04bde4234a81addb8482333b4ac906bed7be5a9970ce8ada428bd083192",
   "wif": 186,
   "client": {
-    "token": "TARK",
-    "symbol": "TѦ",
-    "explorer": "http://texplorer.ark.io"
+    "token": "TPHANTOM",
+    "symbol": "TẔ",
+    "explorer": "http://texplorer.phantom.org"
   },
   "constants": [{
     "height": 1,

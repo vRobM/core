@@ -2,8 +2,8 @@
 
 module.exports = {
   enabled: false,
-  host: process.env.ARK_API_HOST || '0.0.0.0',
-  port: process.env.ARK_API_PORT || 4003,
+  host: process.env.PHANTOM_API_HOST || '0.0.0.0',
+  port: process.env.PHANTOM_API_PORT || 4003,
   versions: {
     default: 1,
     valid: [1, 2]
@@ -13,8 +13,8 @@ module.exports = {
     options: {
       name: 'redisCache',
       engine: 'catbox-redis',
-      host: process.env.ARK_REDIS_HOST || 'localhost',
-      port: process.env.ARK_REDIS_PORT || 6379,
+      host: process.env.PHANTOM_REDIS_HOST || 'localhost',
+      port: process.env.PHANTOM_REDIS_PORT || 6379,
       partition: 'cache',
       expiresIn: 60000
     }

@@ -1,10 +1,10 @@
 'use strict'
 
 const rule = require('../../../../lib/rules/models/transactions/transfer')
-const { constants, transactionBuilder } = require('@arkecosystem/crypto')
+const { constants, transactionBuilder } = require('@phantomcore/crypto')
 const address = 'APnDzjtDb1FthuqcLMeL5XMWb1uD1KeMGi'
-const fee = 1 * constants.ARKTOSHI
-const amount = 10 * constants.ARKTOSHI
+const fee = 1 * constants.PHANTOMTOSHI
+const amount = 10 * constants.PHANTOMTOSHI
 
 let transaction
 beforeEach(() => {

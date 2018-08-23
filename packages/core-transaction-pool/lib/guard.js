@@ -1,7 +1,7 @@
 const Promise = require('bluebird')
-const container = require('@arkecosystem/core-container')
-const { Transaction } = require('@arkecosystem/crypto').models
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
+const container = require('@phantomcore/core-container')
+const { Transaction } = require('@phantomcore/crypto').models
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
 const dynamicFeeMatch = require('./utils/dynamicfee-matcher')
 const helpers = require('./utils/validation-helpers')
 const database = container.resolvePlugin('database')

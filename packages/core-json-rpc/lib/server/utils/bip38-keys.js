@@ -1,4 +1,4 @@
-const { utils, ECPair } = require('@arkecosystem/crypto')
+const { utils, ECPair } = require('@phantomcore/crypto')
 const bip38 = require('bip38')
 const BigInteger = require('bigi')
 const database = require('../services/database')

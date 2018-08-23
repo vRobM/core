@@ -24,6 +24,6 @@
   ],
   "blackList": [],
   "sources": [
-    "https://raw.githubusercontent.com/ArkEcosystem/ARK-Peers/master/devnet.json"
+    "https://raw.githubusercontent.com/PhantomCore/PHANTOM-Peers/master/devnet.json"
   ]
 }

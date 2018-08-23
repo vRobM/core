@@ -1,6 +1,6 @@
 'use strict';
 
-const { Transaction } = require('@arkecosystem/crypto').models
+const { Transaction } = require('@phantomcore/crypto').models
 
 module.exports = async (data) => {
   return data.reduce((total, value, key) => {

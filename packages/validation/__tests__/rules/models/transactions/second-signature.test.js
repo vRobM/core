@@ -1,7 +1,7 @@
 'use strict'
 
 const rule = require('../../../../lib/rules/models/transactions/second-signature')
-const { constants, transactionBuilder } = require('@arkecosystem/crypto')
+const { constants, transactionBuilder } = require('@phantomcore/crypto')
 
 let transaction
 beforeEach(() => {
@@ -23,7 +23,7 @@ describe('Second Signature Transaction Rule', () => {
 
   it('should be valid with correct data', () => {
     transaction.signatureAsset('second passphrase')
-               .fee(1 * constants.ARKTOSHI)
+               .fee(1 * constants.PHANTOMTOSHI)
                .sign('passphrase')
     expect(rule(transaction.getStruct()).errors).toBeNull()
   })
@@ -34,7 +34,7 @@ describe('Second Signature Transaction Rule', () => {
 
   it('should be invalid due to non-zero amount', () => {
     transaction.signatureAsset('second passphrase')
-               .amount(10 * constants.ARKTOSHI)
+               .amount(10 * constants.PHANTOMTOSHI)
                .sign('passphrase')
     expect(rule(transaction.getStruct()).errors).not.toBeNull()
   })

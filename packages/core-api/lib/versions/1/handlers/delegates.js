@@ -1,10 +1,10 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const database = container.resolvePlugin('database')
 const blockchain = container.resolvePlugin('blockchain')
-const { slots } = require('@arkecosystem/crypto')
+const { slots } = require('@phantomcore/crypto')
 
 const utils = require('../utils')
 const schema = require('../schemas/delegates')

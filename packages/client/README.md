@@ -1,4 +1,4 @@
-![ARK Core](https://i.imgur.com/spuGSIQ.jpg)
+![PHANTOM Core](https://i.imgur.com/spuGSIQ.jpg)
 
 # PHANTOM - Client
 

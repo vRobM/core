@@ -1,7 +1,7 @@
 'use strict';
 
 const Hapi = require('hapi')
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 const { graphqlHapi, graphiqlHapi } = require('apollo-server-hapi')
 
 /**

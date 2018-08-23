@@ -1,13 +1,13 @@
 'use strict'
 
 const async = require('async')
-const { crypto, slots } = require('@arkecosystem/crypto')
-const container = require('@arkecosystem/core-container')
+const { crypto, slots } = require('@phantomcore/crypto')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const logger = container.resolvePlugin('logger')
 const emitter = container.resolvePlugin('event-emitter')
 const WalletManager = require('./wallet-manager')
-const { Block } = require('@arkecosystem/crypto').models
+const { Block } = require('@phantomcore/crypto').models
 
 module.exports = class ConnectionInterface {
   /**

@@ -1,7 +1,7 @@
 const engine = require('../engine')
 
 module.exports = (attributes) => {
-  const { error, value } = engine.validate(attributes, engine.joi.arkAddress())
+  const { error, value } = engine.validate(attributes, engine.joi.phantomAddress())
 
   return {
     data: value,

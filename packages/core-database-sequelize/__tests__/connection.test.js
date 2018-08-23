@@ -4,7 +4,7 @@ const app = require('./__support__/setup')
 const generateRound = require('./__support__/utils/generate-round')
 const createConnection = require('./__support__/utils/create-connection')
 const activeDelegates = require('./__fixtures__/delegates.json')
-const { Transaction } = require('@arkecosystem/crypto').models
+const { Transaction } = require('@phantomcore/crypto').models
 
 let genesisBlock
 let connection

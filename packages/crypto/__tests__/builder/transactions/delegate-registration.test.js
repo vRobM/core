@@ -1,4 +1,4 @@
-const ark = require('../../../lib/client')
+const phantom = require('../../../lib/client')
 const crypto = require('../../../lib/crypto/crypto')
 const { TRANSACTION_TYPES } = require('../../../lib/constants')
 const feeManager = require('../../../lib/managers/fee')
@@ -7,7 +7,7 @@ const transactionBuilderTests = require('./__shared__/transaction')
 let builder
 
 beforeEach(() => {
-  builder = ark.getBuilder().delegateRegistration()
+  builder = phantom.getBuilder().delegateRegistration()
 
   global.builder = builder
 })
@@ -44,14 +44,14 @@ describe('Delegate Registration Transaction', () => {
     })
   })
 
-  // FIXME problems with ark-js V1
+  // FIXME problems with phantom-js V1
   xdescribe('getStruct', () => {
     it('should fail if the transaction is not signed', () => {
       try {
         expect(() => builder.getStruct()).toThrow(/transaction.*sign/)
         expect('fail').toBe('this should fail when no error is thrown')
       } catch (_error) {
-        builder = ark.getBuilder().delegateRegistration()
+        builder = phantom.getBuilder().delegateRegistration()
         expect(() => builder.sign('example pass').getStruct()).not.toThrow()
       }
     })

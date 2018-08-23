@@ -1,6 +1,6 @@
 'use strict'
 
-const { client } = require('@arkecosystem/crypto')
+const { client } = require('@phantomcore/crypto')
 const loader = require('./loader')
 
 /**

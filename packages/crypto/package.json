@@ -1,6 +1,6 @@
 {
-  "name": "@arkecosystem/crypto",
-  "description": "Crypto utilities for the ARK blockchain",
+  "name": "@phantomcore/crypto",
+  "description": "Crypto utilities for the PHANTOM blockchain",
   "version": "0.1.1",
   "contributors": [
     "François-Xavier Thoorens <fx.thoorens@ark.io>",
@@ -21,17 +21,17 @@
     "prepublish": "yarn run lint && yarn run build",
     "build": "rm -rf dist && NODE_ENV=production webpack --config build/webpack.config.js",
     "build:docs": "../../node_modules/.bin/jsdoc -c jsdoc.json",
-    "test": "ARK_ENV=test jest --forceExit",
-    "test:coverage": "ARK_ENV=test jest --coverage --forceExit",
-    "test:debug": "ARK_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
+    "test": "PHANTOM_ENV=test jest --forceExit",
+    "test:coverage": "PHANTOM_ENV=test jest --coverage --forceExit",
+    "test:debug": "PHANTOM_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
     "test:watch": "jest --watch",
     "test:watch:all": "jest --watchAll",
     "lint": "eslint -c ../../.eslintrc --ignore-pattern dist ./ --fix",
     "depcheck": "depcheck ./"
   },
   "dependencies": {
-    "@arkecosystem/validation": "^0.1.1",
-    "arkjsv1": "arkecosystem/ark-js#master",
+    "@phantomcore/validation": "^0.1.1",
+    "phantomjsv1": "phantomcore/phantom-js#master",
     "bigi": "^1.4.2",
     "bip38": "^2.0.2",
     "bip66": "^1.1.5",

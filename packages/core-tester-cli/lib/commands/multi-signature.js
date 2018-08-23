@@ -1,6 +1,6 @@
 'use strict'
 
-const ark = require('arkjs')
+const phantom = require('phantomjs')
 const delay = require('delay')
 const utils = require('../utils')
 const logger = utils.logger
@@ -24,7 +24,7 @@ module.exports = async (options) => {
 
   let transactions = []
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.multisignature.createMultisignature(
+    const transaction = phantom.multisignature.createMultisignature(
       wallet.passphrase,
       null,
       publicKeys,
@@ -33,7 +33,7 @@ module.exports = async (options) => {
     )
     transaction.signatures = []
     for (let i = approvalWallets.length - 1; i >= 0; i--) {
-      const approverSignature = ark.multisignature.signTransaction(
+      const approverSignature = phantom.multisignature.signTransaction(
         transaction,
         approvalWallets[i].passphrase
       )
@@ -76,7 +76,7 @@ async function __testSendWithSignatures (multiSignatureWallets, approvalWallets)
 
   const transactions = []
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.transaction.createTransaction(
+    const transaction = phantom.transaction.createTransaction(
       wallet.address,
       2,
       `TID - with sigs: ${i}`,
@@ -84,7 +84,7 @@ async function __testSendWithSignatures (multiSignatureWallets, approvalWallets)
     )
     transaction.signatures = []
     for (let j = approvalWallets.length - 1; j >= 0; j--) {
-      const approverSignature = ark.multisignature.signTransaction(
+      const approverSignature = phantom.multisignature.signTransaction(
         transaction,
         approvalWallets[j].passphrase
       )
@@ -122,7 +122,7 @@ async function __testSendWithMinSignatures (multiSignatureWallets, approvalWalle
 
   const transactions = []
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.transaction.createTransaction(
+    const transaction = phantom.transaction.createTransaction(
       wallet.address,
       2,
       `TID - with ${min} sigs: ${i}`,
@@ -130,7 +130,7 @@ async function __testSendWithMinSignatures (multiSignatureWallets, approvalWalle
     )
     transaction.signatures = []
     for (let j = approvalWallets.length - 1; j >= 0; j--) {
-      const approverSignature = ark.multisignature.signTransaction(
+      const approverSignature = phantom.multisignature.signTransaction(
         transaction,
         approvalWallets[j].passphrase
       )
@@ -172,7 +172,7 @@ async function __testSendWithBelowMinSignatures (multiSignatureWallets, approval
 
   const transactions = []
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.transaction.createTransaction(
+    const transaction = phantom.transaction.createTransaction(
       wallet.address,
       2,
       `TID - with ${max} sigs: ${i}`,
@@ -180,7 +180,7 @@ async function __testSendWithBelowMinSignatures (multiSignatureWallets, approval
     )
     transaction.signatures = []
     for (let j = approvalWallets.length - 1; j >= 0; j--) {
-      const approverSignature = ark.multisignature.signTransaction(
+      const approverSignature = phantom.multisignature.signTransaction(
         transaction,
         approvalWallets[j].passphrase
       )
@@ -221,7 +221,7 @@ async function __testSendWithoutSignatures (multiSignatureWallets) {
 
   const transactions = []
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.transaction.createTransaction(
+    const transaction = phantom.transaction.createTransaction(
       wallet.address,
       2,
       `TID - without sigs: ${i}`,
@@ -259,7 +259,7 @@ async function __testSendWithEmptySignatures (multiSignatureWallets) {
 
   const transactions = []
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.transaction.createTransaction(
+    const transaction = phantom.transaction.createTransaction(
       wallet.address,
       2,
       `TID - without sigs: ${i}`,
@@ -302,7 +302,7 @@ async function __testNewMultiSignatureRegistration (multiSignatureWallets, optio
   const min = options.min ? Math.min(options.min, publicKeys.length) : publicKeys.length
 
   multiSignatureWallets.forEach((wallet, i) => {
-    const transaction = ark.multisignature.createMultisignature(
+    const transaction = phantom.multisignature.createMultisignature(
       wallet.passphrase,
       null,
       publicKeys,
@@ -311,7 +311,7 @@ async function __testNewMultiSignatureRegistration (multiSignatureWallets, optio
     )
     transaction.signatures = []
     for (let i = approvalWallets.length - 1; i >= 0; i--) {
-      const approverSignature = ark.multisignature.signTransaction(
+      const approverSignature = phantom.multisignature.signTransaction(
         transaction,
         approvalWallets[i].passphrase
       )

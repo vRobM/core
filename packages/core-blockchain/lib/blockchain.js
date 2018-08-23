@@ -1,13 +1,13 @@
 'use strict'
 
-const { slots } = require('@arkecosystem/crypto')
-const container = require('@arkecosystem/core-container')
+const { slots } = require('@phantomcore/crypto')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const config = container.resolvePlugin('config')
 const stateMachine = require('./state-machine')
 const Queue = require('./queue')
 const delay = require('delay')
-const { Block } = require('@arkecosystem/crypto').models
+const { Block } = require('@phantomcore/crypto').models
 
 module.exports = class Blockchain {
   /**
@@ -20,8 +20,8 @@ module.exports = class Blockchain {
     stateMachine.state.networkStart = !!networkStart
 
     if (stateMachine.state.networkStart) {
-      logger.warn('ARK Core is launched in Genesis Start mode. This is usually for starting the first node on the blockchain. Unless you know what you are doing, this is likely wrong. :warning:')
-      logger.info('Starting ARK Core for a new world, welcome aboard :rocket:')
+      logger.warn('PHANTOM Core is launched in Genesis Start mode. This is usually for starting the first node on the blockchain. Unless you know what you are doing, this is likely wrong. :warning:')
+      logger.info('Starting PHANTOM Core for a new world, welcome aboard :rocket:')
     }
 
     this.actions = stateMachine.actionMap(this)
@@ -65,11 +65,11 @@ module.exports = class Blockchain {
 
     this.dispatch('START')
 
-    if (skipStartedCheck || process.env.ARK_SKIP_BLOCKCHAIN_STARTED_CHECK) {
+    if (skipStartedCheck || process.env.PHANTOM_SKIP_BLOCKCHAIN_STARTED_CHECK) {
       return true
     }
 
-    // TODO: this state needs to be set after the state.lastBlock is available if ARK_ENV=test
+    // TODO: this state needs to be set after the state.lastBlock is available if PHANTOM_ENV=test
     while (!stateMachine.state.started) {
       await delay(1000)
     }

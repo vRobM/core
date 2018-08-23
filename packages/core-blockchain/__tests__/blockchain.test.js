@@ -1,7 +1,7 @@
 'use strict'
 
 const { asValue } = require('awilix')
-const { slots } = require('@arkecosystem/crypto')
+const { slots } = require('@phantomcore/crypto')
 
 const app = require('./__support__/setup')
 
@@ -22,7 +22,7 @@ afterAll(async () => {
 })
 
 beforeEach(async () => {
-  process.env.ARK_SKIP_BLOCKCHAIN = true
+  process.env.PHANTOM_SKIP_BLOCKCHAIN = true
 
   // manually register the blockchain
   const plugin = require('../lib').plugin
@@ -40,7 +40,7 @@ beforeEach(async () => {
 })
 
 afterEach(async () => {
-  process.env.ARK_SKIP_BLOCKCHAIN = false
+  process.env.PHANTOM_SKIP_BLOCKCHAIN = false
 
   await blockchain.resetState()
 })
@@ -68,7 +68,7 @@ describe('Blockchain', () => {
     })
 
     it('should be ok', async () => {
-      process.env.ARK_SKIP_BLOCKCHAIN = false
+      process.env.PHANTOM_SKIP_BLOCKCHAIN = false
 
       const started = await blockchain.start(true)
 

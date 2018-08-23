@@ -1,7 +1,7 @@
 'use strict'
 
 const mm = require('micromatch')
-const logger = require('@arkecosystem/core-container').resolvePlugin('logger')
+const logger = require('@phantomcore/core-container').resolvePlugin('logger')
 
 /**
  * The register method used by hapi.js.

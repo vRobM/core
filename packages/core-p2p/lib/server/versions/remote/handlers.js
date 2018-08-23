@@ -1,6 +1,6 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 /**
  * Respond with a blockchain event.

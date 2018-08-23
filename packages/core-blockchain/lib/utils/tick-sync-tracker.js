@@ -1,5 +1,5 @@
 const prettyMs = require('pretty-ms')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const database = container.resolvePlugin('database')
 

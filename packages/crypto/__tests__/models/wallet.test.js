@@ -2,7 +2,7 @@ const Wallet = require('../../lib/models/wallet')
 const multiTx = require('./fixtures/multi-transaction')
 
 const configManager = require('../../lib/managers/config')
-const network = require('../../lib/networks/ark/devnet.json')
+const network = require('../../lib/networks/phantom/devnet.json')
 
 describe('Models - Wallet', () => {
   beforeEach(() => configManager.setConfig(network))

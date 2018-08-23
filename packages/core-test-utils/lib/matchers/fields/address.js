@@ -1,9 +1,9 @@
 'use strict'
 
-const { crypto } = require('@arkecosystem/crypto')
+const { crypto } = require('@phantomcore/crypto')
 
 /**
- * Verify if the given value is an ark address.
+ * Verify if the given value is an phantom address.
  * @param  {String} received
  * @param  {String} argument
  * @return {Boolean}

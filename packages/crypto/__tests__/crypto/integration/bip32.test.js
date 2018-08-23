@@ -7,11 +7,11 @@ const HDNode = require('../../../lib/crypto/hdnode')
 const { HIGHEST_BIT } = require('../../../lib/crypto/hdnode/constants')
 const ECPair = require('../../../lib/crypto/ecpair')
 const configManager = require('../../../lib/managers/config')
-const network = require('../../../lib/networks/ark/mainnet.json')
+const network = require('../../../lib/networks/phantom/mainnet.json')
 
 beforeEach(() => configManager.setConfig(network))
 
-describe('ark-js (BIP32)', () => {
+describe('phantom-js (BIP32)', () => {
   it('can create a BIP32 wallet external address', () => {
     const path = "m/0'/0/0"
     const root = HDNode.fromSeedHex('dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd')
@@ -25,7 +25,7 @@ describe('ark-js (BIP32)', () => {
     expect(child2.getAddress()).toBe('AZXdSTRFGHPokX6yfXTfHcTzzHKncioj31')
   })
 
-  it('can create a BIP44, ark, account 0, external address', () => {
+  it('can create a BIP44, phantom, account 0, external address', () => {
     /* eslint quotes: ["error", "single", { avoidEscape: true }] */
     const path = "m/44'/0'/0'/0/0"
     const root = HDNode.fromSeedHex('dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd')

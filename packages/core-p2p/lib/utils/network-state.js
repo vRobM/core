@@ -1,8 +1,8 @@
 'use strict'
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 
-const { slots } = require('@arkecosystem/crypto')
+const { slots } = require('@phantomcore/crypto')
 
 /**
  * Returns current network state. Peers are update before the call
@@ -24,7 +24,7 @@ module.exports = (p2pMonitor, lastBlock) => {
     return {quorum: 0, nodeHeight: lastBlock.data.height, lastBlockId: lastBlock.data.id, overHeightBlockHeader: overHeightBlockHeader, minimumNetworkReach: true, coldStart: true}
   }
 
-  if (process.env.ARK_ENV === 'test') {
+  if (process.env.PHANTOM_ENV === 'test') {
     return {quorum: 1, nodeHeight: lastBlock.data.height, lastBlockId: lastBlock.data.id, overHeightBlockHeader: overHeightBlockHeader, minimumNetworkReach: true, coldStart: false}
   }
 

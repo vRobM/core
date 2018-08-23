@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('@arkecosystem/core-container').resolvePlugin('config')
+const config = require('@phantomcore/core-container').resolvePlugin('config')
 
 /**
  * Calculate the approval for the given delegate.

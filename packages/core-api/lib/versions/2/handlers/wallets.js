@@ -1,7 +1,7 @@
 'use strict'
 
 const Boom = require('boom')
-const database = require('@arkecosystem/core-container').resolvePlugin('database')
+const database = require('@phantomcore/core-container').resolvePlugin('database')
 const utils = require('../utils')
 const schema = require('../schema/wallets')
 

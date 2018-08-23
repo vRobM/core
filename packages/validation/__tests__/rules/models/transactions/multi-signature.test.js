@@ -1,7 +1,7 @@
 'use strict'
 
 const rule = require('../../../../lib/rules/models/transactions/multi-signature')
-const { constants, crypto, transactionBuilder } = require('@arkecosystem/crypto')
+const { constants, crypto, transactionBuilder } = require('@phantomcore/crypto')
 const passphrase = 'passphrase 1'
 const publicKey = '+03e8021105a6c202097e97e6c6d650942d913099bf6c9f14a6815df1023dde3b87'
 const passphrases = [
@@ -64,7 +64,7 @@ describe('Multi Signature Transaction Rule', () => {
 
   it('should be invalid due to non-zero amount', () => {
     transaction.multiSignatureAsset(multiSignatureAsset)
-               .amount(10 * constants.ARKTOSHI)
+               .amount(10 * constants.PHANTOMTOSHI)
                .sign('passphrase')
     signTransaction(transaction, passphrases)
     expect(rule(transaction.getStruct()).errors).not.toBeNull()

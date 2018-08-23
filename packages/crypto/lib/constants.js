@@ -1,12 +1,12 @@
-const configMainnet = require('./networks/ark/mainnet.json')
-const configDevnet = require('./networks/ark/devnet.json')
-const configTestnet = require('./networks/ark/testnet.json')
+const configMainnet = require('./networks/phantom/mainnet.json')
+const configDevnet = require('./networks/phantom/devnet.json')
+const configTestnet = require('./networks/phantom/testnet.json')
 
 /**
- * The Arktoshi base.
+ * The Phantomtoshi base.
  * @type {Number}
  */
-exports.ARKTOSHI = Math.pow(10, 8)
+exports.PHANTOMTOSHI = Math.pow(10, 8)
 
 /**
  * Available transaction types.
@@ -29,7 +29,7 @@ exports.TRANSACTION_TYPES = Object.freeze({
  * @type {Object}
  */
 exports.CONFIGURATIONS = Object.freeze({
-  ARK: {
+  PHANTOM: {
     MAINNET: configMainnet,
     DEVNET: configDevnet,
     TESTNET: configTestnet

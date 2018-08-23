@@ -2,7 +2,7 @@
 
 const moment = require('moment')
 const semver = require('semver')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const isMyself = require('./utils/is-myself')
 

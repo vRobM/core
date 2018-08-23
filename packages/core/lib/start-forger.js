@@ -1,6 +1,6 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 /**
  * Start a forger.
@@ -10,17 +10,17 @@ const container = require('@arkecosystem/core-container')
 module.exports = async (options) => {
   await container.setUp(options, {
     include: [
-      '@arkecosystem/core-event-emitter',
-      '@arkecosystem/core-config',
-      '@arkecosystem/core-logger',
-      '@arkecosystem/core-logger-winston',
-      '@arkecosystem/core-forger'
+      '@phantomcore/core-event-emitter',
+      '@phantomcore/core-config',
+      '@phantomcore/core-logger',
+      '@phantomcore/core-logger-winston',
+      '@phantomcore/core-forger'
     ],
     options: {
-      '@arkecosystem/core-blockchain': {
+      '@phantomcore/core-blockchain': {
         networkStart: options.networkStart
       },
-      '@arkecosystem/core-forger': {
+      '@phantomcore/core-forger': {
         bip38: options.bip38,
         address: options.address,
         password: options.password

@@ -1,6 +1,6 @@
 'use strict'
 
-const ark = require('arkjs')
+const phantom = require('phantomjs')
 const delay = require('delay')
 const sample = require('lodash.sample')
 const utils = require('../utils')
@@ -25,7 +25,7 @@ module.exports = async (options) => {
 
   const transactions = []
   wallets.forEach((wallet, i) => {
-    const transaction = ark.vote.createVote(
+    const transaction = phantom.vote.createVote(
       wallet.passphrase,
       [`+${options.delegate}`],
       config.secondPassphrase,

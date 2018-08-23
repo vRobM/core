@@ -1,5 +1,5 @@
 const request = require('./__support__/request')
-const arkjs = require('arkjs')
+const phantomjs = require('phantomjs')
 
 require('./__support__/setup')
 
@@ -68,7 +68,7 @@ describe('Accounts', () => {
       })
 
       await expect(response.data.result.recipientId).toBe('AUDud8tvyVZa67p3QY7XPRUTjRGnWQQ9Xv')
-      await expect(arkjs.crypto.verify(response.data.result)).toBeTruthy()
+      await expect(phantomjs.crypto.verify(response.data.result)).toBeTruthy()
     })
   })
 })

@@ -1,6 +1,6 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 /**
  * Start a node.
@@ -10,13 +10,13 @@ const container = require('@arkecosystem/core-container')
 module.exports = async (options) => {
   await container.setUp(options, {
     options: {
-      '@arkecosystem/core-p2p': {
+      '@phantomcore/core-p2p': {
         networkStart: options.networkStart
       },
-      '@arkecosystem/core-blockchain': {
+      '@phantomcore/core-blockchain': {
         networkStart: options.networkStart
       },
-      '@arkecosystem/core-forger': {
+      '@phantomcore/core-forger': {
         bip38: options.bip38,
         address: options.address,
         password: options.password

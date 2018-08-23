@@ -1,5 +1,5 @@
 /*
- * List from https://github.com/ArkEcosystem/peers
+ * List from https://github.com/PhantomCore/peers
  */
 module.exports = {
   devnet: [

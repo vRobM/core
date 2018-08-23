@@ -2,7 +2,7 @@ const BigInteger = require('bigi')
 
 const ECSignature = require('../../lib/crypto/ecsignature')
 const configManager = require('../../lib/managers/config')
-const network = require('../../lib/networks/ark/mainnet.json')
+const network = require('../../lib/networks/phantom/mainnet.json')
 
 const fixtures = require('./fixtures/ecsignature.json')
 

@@ -1,7 +1,7 @@
 'use strict'
 
 const axios = require('axios')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const config = container.resolvePlugin('config')
 const threads = require('threads')

@@ -1,16 +1,16 @@
-![ARK Core](banner.png)
+![PHANTOM Core](banner.png)
 
-# ARK Core - Validation
+# PHANTOM Core - Validation
 
 ## Installation
 
 ```bash
-yarn add @arkecosystem/validation
+yarn add @phantomcore/validation
 ```
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phantom.org. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 

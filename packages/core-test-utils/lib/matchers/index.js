@@ -1,6 +1,6 @@
 module.exports = {
-  toBeArkAddress: require('./fields/address'),
-  toBeArkPublicKey: require('./fields/public-key'),
+  toBePhantomAddress: require('./fields/address'),
+  toBePhantomPublicKey: require('./fields/public-key'),
 
   toBeApiTransaction: require('./api/transaction'),
 

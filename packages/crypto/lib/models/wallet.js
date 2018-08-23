@@ -1,12 +1,12 @@
 const configManager = require('../managers/config')
-const { ARKTOSHI, TRANSACTION_TYPES } = require('../constants')
+const { PHANTOMTOSHI, TRANSACTION_TYPES } = require('../constants')
 const ECPair = require('../crypto/ecpair')
 const ECSignature = require('../crypto/ecsignature')
 const crypto = require('../crypto/crypto')
 const transactionHandler = require('../handlers/transactions')
 
 /**
- * TODO copy some parts to ArkDocs
+ * TODO copy some parts to PhantomDocs
  * @classdesc This class holds the wallet data, verifies it and applies the
  * transaction and blocks to it
  *
@@ -278,7 +278,7 @@ module.exports = class Wallet {
    * @return {String}
    */
   toString () {
-    return `${this.address}=${this.balance / ARKTOSHI}`
+    return `${this.address}=${this.balance / PHANTOMTOSHI}`
   }
 
   /**

@@ -1,12 +1,12 @@
 'use strict'
 
-const ark = require('arkjs')
+const phantom = require('phantomjs')
 const config = require('../config')
 const delay = require('delay')
 const utils = require('../utils')
 const logger = utils.logger
 
-const primaryAddress = ark.crypto.getAddress(ark.crypto.getKeys(config.passphrase).publicKey)
+const primaryAddress = phantom.crypto.getAddress(phantom.crypto.getKeys(config.passphrase).publicKey)
 const sendTransactionsWithResults = async (transactions, wallets, transactionAmount, expectedSenderBalance, options) => {
   let successfulTest = true
 
@@ -55,7 +55,7 @@ const sendTransactionsWithResults = async (transactions, wallets, transactionAmo
   return successfulTest
 }
 
-module.exports = async (options, wallets, arkPerTransaction, skipTestingAgain) => {
+module.exports = async (options, wallets, phantomPerTransaction, skipTestingAgain) => {
   utils.applyConfigOptions(options)
 
   if (wallets === undefined) {
@@ -70,14 +70,14 @@ module.exports = async (options, wallets, arkPerTransaction, skipTestingAgain) =
 
   const transactions = []
   let totalDeductions = 0
-  let transactionAmount = (arkPerTransaction || 2) * Math.pow(10, 8)
+  let transactionAmount = (phantomPerTransaction || 2) * Math.pow(10, 8)
 
   if (options.amount) {
     transactionAmount = options.amount
   }
 
   wallets.forEach((wallet, i) => {
-    const transaction = ark.transaction.createTransaction(
+    const transaction = phantom.transaction.createTransaction(
       options.recipient || wallet.address,
       transactionAmount,
       `TID: ${i}`,

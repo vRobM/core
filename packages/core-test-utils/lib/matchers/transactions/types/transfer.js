@@ -1,6 +1,6 @@
 'use strict'
 
-const { TRANSFER } = require('@arkecosystem/crypto').constants
+const { TRANSFER } = require('@phantomcore/crypto').constants
 
 module.exports = (received) => {
   return {

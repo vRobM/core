@@ -3,7 +3,7 @@ const leveldown = require('leveldown')
 
 class Database {
   constructor () {
-    this.database = levelup(leveldown(`${process.env.ARK_PATH_DATA}/database/json-rpc`))
+    this.database = levelup(leveldown(`${process.env.PHANTOM_PATH_DATA}/database/json-rpc`))
   }
 
   async getUTF8 (id) {

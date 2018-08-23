@@ -190,7 +190,7 @@ module.exports = class PluginRegistrars {
     const available = ['plugins.js', 'plugins.json']
 
     for (let i = 0; i < available.length; i++) {
-      const configPath = path.resolve(expandHomeDir(`${process.env.ARK_PATH_CONFIG}/${available[i]}`))
+      const configPath = path.resolve(expandHomeDir(`${process.env.PHANTOM_PATH_CONFIG}/${available[i]}`))
       if (fs.existsSync(configPath)) {
         this.pluginsConfigPath = configPath
         return require(configPath)

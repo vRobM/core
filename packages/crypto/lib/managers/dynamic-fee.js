@@ -9,9 +9,9 @@ class DynamicFeeManager {
   }
 
   /** Calculates delegate fee for processing and forging if transaction
-  * @param {Number} Fee price per byte in ARKTOSHI as set by forger/delegate in delegate.json setting feeMultiplier
+  * @param {Number} Fee price per byte in PHANTOMTOSHI as set by forger/delegate in delegate.json setting feeMultiplier
   * @param {Transaction} Transaction for which we calculate dynamic fee
-  * @returns {Number} Calculated dynamic fee in ARKTOSHI
+  * @returns {Number} Calculated dynamic fee in PHANTOMTOSHI
   */
   calculateFee (feeMultiplier, transaction) {
     if (feeMultiplier === 0) {

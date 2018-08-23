@@ -5,6 +5,6 @@ const pretty = pino.pretty({
 pretty.pipe(process.stdout)
 
 module.exports = pino({
-  name: 'ark-tester-cli',
+  name: 'phantom-tester-cli',
   safe: true
 }, pretty)

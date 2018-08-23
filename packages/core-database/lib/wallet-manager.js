@@ -3,10 +3,10 @@
 const Promise = require('bluebird')
 
 const { map, orderBy, sumBy } = require('lodash')
-const { crypto } = require('@arkecosystem/crypto')
-const { Wallet } = require('@arkecosystem/crypto').models
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
-const container = require('@arkecosystem/core-container')
+const { crypto } = require('@phantomcore/crypto')
+const { Wallet } = require('@phantomcore/crypto').models
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
+const container = require('@phantomcore/core-container')
 const config = container.resolvePlugin('config')
 const logger = container.resolvePlugin('logger')
 const emitter = container.resolvePlugin('event-emitter')

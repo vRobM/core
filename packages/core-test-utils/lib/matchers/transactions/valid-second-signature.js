@@ -1,6 +1,6 @@
 'use strict'
 
-const { crypto } = require('@arkecosystem/crypto')
+const { crypto } = require('@phantomcore/crypto')
 
 module.exports = (actual, expected) => {
   return {

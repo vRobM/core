@@ -1,6 +1,6 @@
 'use strict'
 
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 /**
  * Create a snapshot.
@@ -10,16 +10,16 @@ const container = require('@arkecosystem/core-container')
 module.exports = async (options) => {
   await container.setUp(options, {
     include: [
-      '@arkecosystem/core-event-emitter',
-      '@arkecosystem/core-config',
-      '@arkecosystem/core-logger',
-      '@arkecosystem/core-logger-winston',
-      '@arkecosystem/core-database',
-      '@arkecosystem/core-database-sequelize',
-      '@arkecosystem/core-blockchain'
+      '@phantomcore/core-event-emitter',
+      '@phantomcore/core-config',
+      '@phantomcore/core-logger',
+      '@phantomcore/core-logger-winston',
+      '@phantomcore/core-database',
+      '@phantomcore/core-database-sequelize',
+      '@phantomcore/core-blockchain'
     ],
     options: {
-      '@arkecosystem/core-blockchain': {
+      '@phantomcore/core-blockchain': {
         networkStart: options.networkStart
       }
     }

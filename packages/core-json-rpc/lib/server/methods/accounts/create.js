@@ -1,14 +1,14 @@
 const Joi = require('joi')
-const ark = require('@arkecosystem/crypto')
+const phantom = require('@phantomcore/crypto')
 
 module.exports = {
   name: 'accounts.create',
   async method (params) {
-    const account = ark.crypto.getKeys(params.passphrase)
+    const account = phantom.crypto.getKeys(params.passphrase)
 
     return {
       publicKey: account.publicKey,
-      address: ark.crypto.getAddress(account.publicKey)
+      address: phantom.crypto.getAddress(account.publicKey)
     }
   },
   schema: {

@@ -1,6 +1,6 @@
 {
-  "name": "@arkecosystem/core-deployer",
-  "description": "Deployer for ARK Core",
+  "name": "@phantomcore/core-deployer",
+  "description": "Deployer for PHANTOM Core",
   "version": "0.1.1",
   "contributors": [
     "Brian Faust <brian@ark.io>",
@@ -9,20 +9,20 @@
   "license": "MIT",
   "main": "lib/index.js",
   "bin": {
-    "ark:deployer": "./bin/deployer"
+    "phantom:deployer": "./bin/deployer"
   },
   "scripts": {
     "start": "./bin/deployer",
-    "test": "ARK_ENV=test jest --forceExit",
-    "test:coverage": "ARK_ENV=test jest --coverage --forceExit",
-    "test:debug": "ARK_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
-    "test:watch": "ARK_ENV=test jest --runInBand --watch",
-    "test:watch:all": "ARK_ENV=test jest --runInBand --watchAll",
+    "test": "PHANTOM_ENV=test jest --forceExit",
+    "test:coverage": "PHANTOM_ENV=test jest --coverage --forceExit",
+    "test:debug": "PHANTOMNTOM_ENV=test node --inspect-brk ../../node_modules/.bin/jest --runInBand --watch",
+    "test:watch": "PHANTOM_ENV=test jest --runInBand --watch",
+    "test:watch:all": "PHANTOM_ENV=test jest --runInBand --watchAll",
     "lint": "eslint ./ --fix",
     "depcheck": "depcheck ./ --ignores=commander"
   },
   "dependencies": {
-    "arkjs": "https://github.com/ArkEcosystem/ark-js#master",
+    "phantomjs": "https://github.com/PhantomCore/phantom-js#master",
     "bigi": "^1.4.2",
     "bip39": "^2.5.0",
     "bytebuffer": "^5.0.1",

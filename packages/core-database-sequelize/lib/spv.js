@@ -1,6 +1,6 @@
-const { Transaction } = require('@arkecosystem/crypto').models
-const { TRANSACTION_TYPES } = require('@arkecosystem/crypto').constants
-const container = require('@arkecosystem/core-container')
+const { Transaction } = require('@phantomcore/crypto').models
+const { TRANSACTION_TYPES } = require('@phantomcore/crypto').constants
+const container = require('@phantomcore/core-container')
 const logger = container.resolvePlugin('logger')
 const config = container.resolvePlugin('config')
 

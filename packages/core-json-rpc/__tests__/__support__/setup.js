@@ -1,25 +1,25 @@
 'use strict'
 
 const path = require('path')
-const container = require('@arkecosystem/core-container')
+const container = require('@phantomcore/core-container')
 
 jest.setTimeout(60000)
 
 beforeAll(async () => {
   await container.setUp({
-    data: '~/.ark',
+    data: '~/.phantom',
     config: path.resolve(__dirname, '../../../core/lib/config/mainnet'),
-    token: 'ark',
+    token: 'phantom',
     network: 'mainnet'
   }, {
     exclude: [
-      '@arkecosystem/core-api',
-      '@arkecosystem/core-webhooks',
-      '@arkecosystem/core-graphql',
-      '@arkecosystem/core-forger'
+      '@phantomcore/core-api',
+      '@phantomcore/core-webhooks',
+      '@phantomcore/core-graphql',
+      '@phantomcore/core-forger'
     ],
     options: {
-      '@arkecosystem/core-json-rpc': {
+      '@phantomcore/core-json-rpc': {
         enabled: true
       }
     }
