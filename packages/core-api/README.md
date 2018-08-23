@@ -1,4 +1,4 @@
-![ARK Core](https://i.imgur.com/1aP6F2o.png)
+![PHANTOM Core](https://i.imgur.com/dPHOKrL.jpg)
 
 # ARK Core - API
 
