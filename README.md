@@ -20,7 +20,7 @@ This repository contains all plugins that make up the PHANTOM Core.
 
 ## Core Packages
 
-[![Build Status](https://travis-ci.org/ArkEcosystem/core.svg?branch=master)](https://travis-ci.org/ArkEcosystem/core)
+[![Build Status](https://travis-ci.org/PhantomCore/core.svg?branch=master)](https://travis-ci.org/PhantomCore/core)
 
 | Package | Version | Description
 |---|---|---|
