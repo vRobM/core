@@ -1,17 +1,17 @@
-![ARK Core](banner.png)
+![ARK Core](https://i.imgur.com/spuGSIQ.jpg)
 
-# ARK - Client
+# PHANTOM - Client
 
 ## Installation
 
 ```bash
-yarn add @arkecosystem/client
+yarn add @phnatomcore/client
 ```
 
 If you want to use the CDN version:
 
 ```html
-<script src="https://unpkg.com/@arkecosystem/client/dist/bundle.umd.js"></script>
+<script src="https://unpkg.com/@phantomcore/client/dist/bundle.umd.js"></script>
 ```
 
 ## Usage
@@ -19,18 +19,18 @@ If you want to use the CDN version:
 Import the library in node.js:
 
 ```
-import ArkEcosystemClient from @arkecosystem/client
+import PhantomCoreClient from @phantomcore/client
 ```
 
 Use the library:
 
 ```
-const client = new ArkEcosystemClient('<your host here>')
+const client = new PhantomCoreClient('<your host here>')
 ```
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to security@phnatom.org. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -42,4 +42,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [ArkEcosystem](https://ark.io)
+[MIT](LICENSE) ©
