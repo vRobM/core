@@ -23,7 +23,7 @@ This repository contains all plugins that make up the PHANTOM Core.
 [![Build Status](https://travis-ci.org/PhantomCore/core.svg?branch=master)](https://travis-ci.org/PhantomCore/core)
 
 | Package | Description
-|---|---|---|
+|---|---|
 | **[core](/packages/core)** | **Includes all packages** |
 | [client](/packages/client) | A JavaScript library to interact with the ARK Blockchain |
 | [core-api](/packages/core-api) | Public API |
