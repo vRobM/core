@@ -1,4 +1,4 @@
-const phantom = require('phantomjs')
+const phantom = require('phantomjscore')
 const bignum = require('bigi')
 const bip39 = require('bip39')
 const ByteBuffer = require('bytebuffer')

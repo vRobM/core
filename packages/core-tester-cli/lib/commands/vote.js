@@ -1,6 +1,6 @@
 'use strict'
 
-const phantom = require('phantomjs')
+const phantom = require('phantomjscore')
 const delay = require('delay')
 const sample = require('lodash.sample')
 const utils = require('../utils')

@@ -1,6 +1,6 @@
 'use strict'
 
-const phantom = require('phantomjs')
+const phantom = require('phantomjscore')
 const delay = require('delay')
 const utils = require('../utils')
 const config = require('../config')

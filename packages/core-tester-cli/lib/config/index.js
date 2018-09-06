@@ -14,6 +14,6 @@ const config = {
   transactionWaitDelay: 15
 }
 
-require('phantomjs').crypto.setNetworkVersion(config.publicKeyHash)
+require('phantomjscore').crypto.setNetworkVersion(config.publicKeyHash)
 
 module.exports = config
