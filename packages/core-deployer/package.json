@@ -22,7 +22,7 @@
     "depcheck": "depcheck ./ --ignores=commander"
   },
   "dependencies": {
-    "phantomjs": "https://github.com/PhantomCore/phantom-js#master",
+    "phantomjscore": "^0.2.1",
     "bigi": "^1.4.2",
     "bip39": "^2.5.0",
     "bytebuffer": "^5.0.1",

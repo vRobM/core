@@ -21,7 +21,7 @@
   "dependencies": {
     "@phantomcore/core-container": "^0.1.1",
     "@phantomcore/crypto": "^0.1.1",
-    "phantomjs": "https://github.com/PhantomCore/phantom-js#master",
+    "phantomjscore": "^0.2.1",
     "axios": "^0.18.0",
     "bigi": "^1.4.2",
     "bip38": "^2.0.2",
