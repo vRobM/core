@@ -22,7 +22,9 @@
     "test:watch": "jest --watch",
     "test:watch:all": "jest --watchAll",
     "lint": "eslint ./ --fix",
-    "depcheck": "depcheck ./"
+    "depcheck": "depcheck ./",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@arkecosystem/validation": "^0.1.1",
@@ -45,9 +47,11 @@
     "randombytes": "^2.0.6",
     "secp256k1": "^3.5.0",
     "typeforce": "^1.12.0",
-    "wif": "^2.0.6"
+    "wif": "^2.0.6",
+    "snyk": "^1.189.0"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
