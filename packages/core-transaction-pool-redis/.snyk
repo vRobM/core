@@ -18,3 +18,8 @@ patch:
         patched: '2019-07-03T23:24:59.196Z'
     - '@arkecosystem/core-transaction-pool > @arkecosystem/crypto > @arkecosystem/validation > @arkecosystem/core-container > lodash':
         patched: '2019-07-03T23:24:59.196Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T23:29:54.131Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T23:29:54.131Z'
