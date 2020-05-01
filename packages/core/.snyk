@@ -1,0 +1,30 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - '@arkecosystem/core-webhooks > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-database-sequelize > @arkecosystem/core-database > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/crypto > webpack-merge > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool > async > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-webhooks > sequelize > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-webhooks > bull > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool-redis > @arkecosystem/core-transaction-pool > @arkecosystem/crypto > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool-redis > @arkecosystem/crypto > webpack-merge > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool-redis > @arkecosystem/core-transaction-pool > async > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool-redis > @arkecosystem/crypto > @arkecosystem/validation > @arkecosystem/core-container > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool-redis > @arkecosystem/core-transaction-pool > @arkecosystem/crypto > webpack-merge > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
+    - '@arkecosystem/core-transaction-pool-redis > @arkecosystem/core-transaction-pool > @arkecosystem/crypto > @arkecosystem/validation > @arkecosystem/core-container > lodash':
+        patched: '2020-05-01T03:04:29.595Z'
