@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -25,3 +25,20 @@ patch:
         patched: '2019-10-06T05:04:42.290Z'
     - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
         patched: '2019-10-06T05:04:42.290Z'
+  SNYK-JS-LODASH-567746:
+    - '@arkecosystem/core-database > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
+    - sequelize > lodash:
+        patched: '2020-05-01T05:04:48.536Z'
+    - '@arkecosystem/core-database > @arkecosystem/crypto > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
+    - '@arkecosystem/crypto > webpack-merge > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
+    - '@arkecosystem/core-database > async > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
+    - '@arkecosystem/crypto > @arkecosystem/validation > @arkecosystem/core-container > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
+    - '@arkecosystem/core-database > @arkecosystem/crypto > webpack-merge > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
+    - '@arkecosystem/core-database > @arkecosystem/crypto > @arkecosystem/validation > @arkecosystem/core-container > lodash':
+        patched: '2020-05-01T05:04:48.536Z'
