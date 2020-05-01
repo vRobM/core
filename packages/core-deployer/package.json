@@ -19,7 +19,9 @@
     "test:watch": "ARK_ENV=test jest --runInBand --watch",
     "test:watch:all": "ARK_ENV=test jest --runInBand --watchAll",
     "lint": "eslint ./ --fix",
-    "depcheck": "depcheck ./ --ignores=commander"
+    "depcheck": "depcheck ./ --ignores=commander",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@arkecosystem/core-config": "^0.1.1",
@@ -32,9 +34,11 @@
     "fs-extra": "^6.0.1",
     "joi": "^13.3.0",
     "lodash": "^4.17.10",
-    "pino": "^4.16.1"
+    "pino": "^4.16.1",
+    "snyk": "^1.316.1"
   },
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "snyk": true
 }
