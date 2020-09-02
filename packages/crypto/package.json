@@ -42,7 +42,7 @@
     "fast-glob": "^2.2.2",
     "lodash": "^4.17.10",
     "moment": "^2.22.1",
-    "node-forge": "^0.7.5",
+    "node-forge": "^0.10.0",
     "otplib": "^9.0.0",
     "randombytes": "^2.0.6",
     "secp256k1": "^3.5.0",
