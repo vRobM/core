@@ -63,7 +63,7 @@
     "@arkecosystem/core-transaction-pool": "^0.1.1",
     "@arkecosystem/core-transaction-pool-redis": "^0.1.1",
     "@arkecosystem/core-webhooks": "^0.1.1",
-    "@arkecosystem/crypto": "^0.1.1",
+    "@arkecosystem/crypto": "^2.6.0",
     "commander": "^2.15.1"
   },
   "publishConfig": {
